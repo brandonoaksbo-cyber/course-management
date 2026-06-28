@@ -143,7 +143,7 @@ function showHole() {
     btn.innerHTML = `
       <div class="choice-card-top">
         <div class="choice-label">${String.fromCharCode(65 + idx)}. ${choice.label}</div>
-        <span class="risk-badge ${risk.cls}">${risk.label}</span>
+        <span class="risk-badge ${risk.cls} hidden">${risk.label}</span>
       </div>
       <div class="choice-detail">${choice.detail}</div>
     `;
@@ -248,6 +248,9 @@ function confirmChoice() {
 
     outcomeEl.classList.remove('hidden');
     outcomeEl.classList.add('reveal');
+
+    // Reveal risk badges
+    document.querySelectorAll('.risk-badge').forEach(b => b.classList.remove('hidden'));
 
     // Flash for birdie/eagle
     if (result.outcome === 'eagle') outcomeEl.classList.add('eagle-flash');
