@@ -83,12 +83,32 @@
       <button class="confirm-btn" id="confirm-btn" disabled>Commit to This Play</button>
 
       <div class="shot-in-flight hidden" id="shot-in-flight">
-        <div class="flight-label">Ball is in the air</div>
-        <div class="flight-dots">
-          <div class="flight-dot"></div>
-          <div class="flight-dot"></div>
-          <div class="flight-dot"></div>
-        </div>
+        <svg class="ball-flight-svg" viewBox="0 0 300 90" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="ballGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="2.5" result="blur"/>
+              <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <!-- Ground -->
+          <line x1="0" y1="83" x2="300" y2="83" stroke="#22c55e" stroke-width="1.5" opacity="0.3"/>
+          <!-- Tee -->
+          <rect x="10" y="80" width="8" height="3" rx="1" fill="#22c55e" opacity="0.5"/>
+          <!-- Flag pin -->
+          <line x1="281" y1="48" x2="281" y2="83" stroke="#4a6580" stroke-width="1.5"/>
+          <polygon points="281,48 298,57 281,66" fill="#ef4444" opacity="0.85"/>
+          <!-- Ball -->
+          <circle fill="white" filter="url(#ballGlow)">
+            <animateMotion dur="1.5s" repeatCount="indefinite" calcMode="spline"
+              keyTimes="0;1" keySplines="0.3 0 0.7 1"
+              path="M 14 81 Q 148 3 279 81"/>
+            <animate attributeName="opacity" dur="1.5s" repeatCount="indefinite" calcMode="linear"
+              keyTimes="0;0.06;0.88;1" values="0;1;1;0"/>
+            <animate attributeName="r" dur="1.5s" repeatCount="indefinite" calcMode="spline"
+              keyTimes="0;0.5;1" values="5.5;3;5.5" keySplines="0.4 0 0.6 1;0.4 0 0.6 1"/>
+          </circle>
+        </svg>
+        <div class="flight-label">Ball in the air</div>
       </div>
 
       <div class="outcome-area hidden" id="outcome-area">

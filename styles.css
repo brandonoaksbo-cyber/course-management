@@ -497,34 +497,21 @@ html, body {
 }
 .shot-in-flight.hidden { display: none; }
 
+.ball-flight-svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px;
+}
+
 .flight-label {
   font-family: var(--score-font);
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--text-dim);
-  margin-bottom: 16px;
-}
-
-.flight-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-.flight-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--ocean);
-  animation: dotPulse 1.2s ease-in-out infinite;
-}
-.flight-dot:nth-child(2) { animation-delay: 0.2s; }
-.flight-dot:nth-child(3) { animation-delay: 0.4s; }
-
-@keyframes dotPulse {
-  0%, 100% { opacity: 0.2; transform: scale(0.8); }
-  50%       { opacity: 1;   transform: scale(1.2); }
+  color: var(--muted);
 }
 
 /* ─── Outcome Area ───────────────────────────────────────────────────────── */
