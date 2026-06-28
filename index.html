@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Course Mgmt">
+  <meta name="theme-color" content="#0d1117">
+  <title>Course Management</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body>
+
+  <!-- ── Course Select ───────────────────────────────────────────────────── -->
+  <section id="course-select" class="screen">
+    <div class="select-header">
+      <h1>Course Management</h1>
+      <p>Make smarter decisions. Shoot lower scores.</p>
+    </div>
+
+    <div class="player-card">
+      <div class="player-card-title">Your Profile</div>
+      <div class="player-stats">
+        <div class="player-stat">
+          <div class="player-stat-val">280</div>
+          <div class="player-stat-lbl">Driver avg</div>
+        </div>
+        <div class="player-stat">
+          <div class="player-stat-val">170</div>
+          <div class="player-stat-lbl">7-iron</div>
+        </div>
+        <div class="player-stat">
+          <div class="player-stat-val">70</div>
+          <div class="player-stat-lbl">Money shot</div>
+        </div>
+        <div class="player-stat">
+          <div class="player-stat-val">6,600</div>
+          <div class="player-stat-lbl">Tee yardage</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="course-grid"></div>
+  </section>
+
+  <!-- ── Hole Screen ─────────────────────────────────────────────────────── -->
+  <section id="hole-screen" class="screen">
+    <div class="hole-topbar">
+      <div class="hole-topbar-left">
+        <div class="hole-course-label" id="hole-course-name">Pebble Beach</div>
+        <div class="hole-title" id="hole-number">Hole 1</div>
+        <div class="hole-meta">
+          <div class="hole-tag" id="hole-par">Par 4</div>
+          <div class="hole-tag" id="hole-yardage">377 yards</div>
+        </div>
+      </div>
+      <div class="score-pill" id="scorecard-toggle">
+        <span>Score</span>
+        <strong id="running-score">E</strong>
+      </div>
+    </div>
+
+    <div id="scorecard-drawer" class="scorecard-drawer">
+      <div class="scorecard-strip" id="scorecard-strip"></div>
+    </div>
+
+    <div class="hole-body">
+      <div class="situation-box">
+        <div class="situation-label">The Situation</div>
+        <div id="hole-situation"></div>
+      </div>
+
+      <div class="choices-label">Your Decision</div>
+      <div id="choices-container"></div>
+
+      <button class="confirm-btn" id="confirm-btn" disabled>Commit to This Play</button>
+
+      <div class="outcome-area hidden" id="outcome-area">
+        <div class="outcome-header">
+          <div class="outcome-badge" id="outcome-badge">Par</div>
+          <div class="outcome-result" id="outcome-result">Running total: E</div>
+        </div>
+        <div class="caddie-section">
+          <div class="caddie-label">Caddie's Take</div>
+          <div id="caddie-text"></div>
+        </div>
+        <button class="next-btn" id="next-btn">Next Hole →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final Scorecard ─────────────────────────────────────────────────── -->
+  <section id="final-screen" class="screen">
+    <div class="final-header">
+      <div class="final-course" id="final-course-name">Pebble Beach Golf Links</div>
+      <div class="final-score" id="final-total-score">E</div>
+      <div class="final-score-label" id="final-label">Mid-Amateur</div>
+      <div class="final-best hidden" id="final-best"></div>
+    </div>
+
+    <div class="final-body">
+      <div class="stats-grid" id="final-stats"></div>
+
+      <div class="scorecard-section-label">Hole-by-Hole</div>
+      <table class="scorecard-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Par</th>
+            <th>Yds</th>
+            <th>Result</th>
+            <th>+/−</th>
+          </tr>
+        </thead>
+        <tbody id="final-scorecard-table"></tbody>
+      </table>
+
+      <div class="final-actions">
+        <button class="btn-primary" id="play-again-btn">Play Again</button>
+        <button class="btn-secondary" id="home-btn">Choose Another Course</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="scenarios.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
