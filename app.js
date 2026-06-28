@@ -137,10 +137,14 @@ function showHole() {
   choicesEl.innerHTML = '';
 
   hole.choices.forEach((choice, idx) => {
+    const risk = getRisk(choice.outcomes);
     const btn = document.createElement('div');
     btn.className = 'choice-card';
     btn.innerHTML = `
-      <div class="choice-label">${String.fromCharCode(65 + idx)}. ${choice.label}</div>
+      <div class="choice-card-top">
+        <div class="choice-label">${String.fromCharCode(65 + idx)}. ${choice.label}</div>
+        <span class="risk-badge ${risk.cls}">${risk.label}</span>
+      </div>
       <div class="choice-detail">${choice.detail}</div>
     `;
     btn.addEventListener('click', () => selectChoice(idx));
@@ -165,6 +169,15 @@ function selectChoice(idx) {
   });
 
   document.getElementById('confirm-btn').disabled = false;
+}
+
+function getRisk(outcomes) {
+  const total = outcomes.reduce((s, o) => s + o.weight, 0);
+  const penalty = outcomes.filter(o => o.outcome === 'bogey' || o.outcome === 'double').reduce((s, o) => s + o.weight, 0);
+  const pct = penalty / total;
+  if (pct >= 0.55) return { label: 'High Risk', cls: 'risk-high' };
+  if (pct >= 0.30) return { label: 'Bold Play', cls: 'risk-medium' };
+  return { label: 'Safe Play', cls: 'risk-low' };
 }
 
 function pickWeightedOutcome(outcomes) {
@@ -193,41 +206,60 @@ function confirmChoice() {
   // Record score
   state.scores.push(result.score);
 
-  // Show outcome
-  const outcomeEl = document.getElementById('outcome-area');
-  const badgeEl = document.getElementById('outcome-badge');
-  const resultEl = document.getElementById('outcome-result');
-  const caddieEl = document.getElementById('caddie-text');
-
-  const outcomeMap = {
-    eagle:  { label: 'Eagle',  class: 'badge-eagle',  char: '−2' },
-    birdie: { label: 'Birdie', class: 'badge-birdie', char: '−1' },
-    par:    { label: 'Par',    class: 'badge-par',    char: 'E' },
-    bogey:  { label: 'Bogey', class: 'badge-bogey',  char: '+1' },
-    double: { label: 'Double', class: 'badge-double', char: '+2' },
-  };
-
-  const om = outcomeMap[result.outcome];
-  badgeEl.className = `outcome-badge ${om.class}`;
-  badgeEl.textContent = `${om.label} (${om.char})`;
-  resultEl.textContent = `Running total: ${formatScore(totalToPar())}`;
-  caddieEl.textContent = result.caddieText;
-
-  outcomeEl.classList.remove('hidden');
-  document.getElementById('confirm-btn').classList.add('hidden');
-
   // Update score pill
-  document.getElementById('running-score').textContent = formatScore(totalToPar());
+  const scorePill = document.getElementById('running-score');
+  scorePill.textContent = formatScore(totalToPar());
+  const pillEl = scorePill.closest('.score-pill');
+  if (pillEl) {
+    pillEl.classList.toggle('score-under', totalToPar() < 0);
+    pillEl.classList.toggle('score-over', totalToPar() > 0);
+  }
 
-  // Update next button label
-  const nextBtn = document.getElementById('next-btn');
-  const isLast = state.currentHoleIndex === state.currentCourse.holes.length - 1;
-  nextBtn.textContent = isLast ? 'View Scorecard' : `Next Hole →`;
+  // Show ball-in-flight state
+  document.getElementById('confirm-btn').classList.add('hidden');
+  const flightEl = document.getElementById('shot-in-flight');
+  flightEl.classList.remove('hidden');
 
-  // Scroll to outcome
+  // Scroll to flight indicator
+  setTimeout(() => flightEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+
+  // Reveal outcome after delay
   setTimeout(() => {
-    outcomeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }, 100);
+    flightEl.classList.add('hidden');
+
+    const outcomeEl = document.getElementById('outcome-area');
+    const badgeEl = document.getElementById('outcome-badge');
+    const resultEl = document.getElementById('outcome-result');
+    const caddieEl = document.getElementById('caddie-text');
+
+    const outcomeMap = {
+      eagle:  { label: 'Eagle',  class: 'badge-eagle',  char: '−2' },
+      birdie: { label: 'Birdie', class: 'badge-birdie', char: '−1' },
+      par:    { label: 'Par',    class: 'badge-par',    char: 'E'  },
+      bogey:  { label: 'Bogey', class: 'badge-bogey',  char: '+1' },
+      double: { label: 'Double', class: 'badge-double', char: '+2' },
+    };
+
+    const om = outcomeMap[result.outcome];
+    badgeEl.className = `outcome-badge ${om.class} celebrate`;
+    badgeEl.textContent = `${om.label} (${om.char})`;
+    resultEl.textContent = `Running total: ${formatScore(totalToPar())}`;
+    caddieEl.textContent = result.caddieText;
+
+    outcomeEl.classList.remove('hidden');
+    outcomeEl.classList.add('reveal');
+
+    // Flash for birdie/eagle
+    if (result.outcome === 'eagle') outcomeEl.classList.add('eagle-flash');
+    else if (result.outcome === 'birdie') outcomeEl.classList.add('birdie-flash');
+
+    // Update next button label
+    const nextBtn = document.getElementById('next-btn');
+    const isLast = state.currentHoleIndex === state.currentCourse.holes.length - 1;
+    nextBtn.textContent = isLast ? 'View Scorecard →' : 'Next Hole →';
+
+    setTimeout(() => outcomeEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+  }, 1500);
 }
 
 function nextHole() {
