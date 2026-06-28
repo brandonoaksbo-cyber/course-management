@@ -120,6 +120,11 @@ function showHole() {
   // Update scorecard strip
   updateScorecardStrip();
 
+  // Populate diagram
+  const diagramEl = document.getElementById('hole-diagram');
+  const svg = HOLE_DIAGRAMS[hole.number];
+  diagramEl.innerHTML = svg || '';
+
   // Populate hole info
   document.getElementById('hole-course-name').textContent = course.name;
   document.getElementById('hole-number').textContent = `Hole ${hole.number}`;

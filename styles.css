@@ -343,6 +343,20 @@ html, body {
 .sc-bogey .sc-dot { color: var(--tan); }
 .sc-double .sc-dot { color: var(--red); }
 
+/* ─── Hole Diagram ───────────────────────────────────────────────────────── */
+.hole-diagram {
+  width: 100%;
+  border-bottom: 1px solid var(--border-gold);
+  background: #0b1a0f;
+  line-height: 0;
+}
+.hole-diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 200px;
+}
+
 .hole-body { padding: 24px; flex: 1; }
 
 .situation-box {
