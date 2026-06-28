@@ -167,11 +167,22 @@ function selectChoice(idx) {
   document.getElementById('confirm-btn').disabled = false;
 }
 
+function pickWeightedOutcome(outcomes) {
+  const total = outcomes.reduce((sum, o) => sum + o.weight, 0);
+  let rand = Math.random() * total;
+  for (const o of outcomes) {
+    rand -= o.weight;
+    if (rand <= 0) return o;
+  }
+  return outcomes[outcomes.length - 1];
+}
+
 function confirmChoice() {
   if (state.selectedChoice === null) return;
 
   const hole = state.currentCourse.holes[state.currentHoleIndex];
   const choice = hole.choices[state.selectedChoice];
+  const result = pickWeightedOutcome(choice.outcomes);
 
   // Lock choices
   document.querySelectorAll('.choice-card').forEach((card, i) => {
@@ -180,7 +191,7 @@ function confirmChoice() {
   });
 
   // Record score
-  state.scores.push(choice.score);
+  state.scores.push(result.score);
 
   // Show outcome
   const outcomeEl = document.getElementById('outcome-area');
@@ -196,11 +207,11 @@ function confirmChoice() {
     double: { label: 'Double', class: 'badge-double', char: '+2' },
   };
 
-  const om = outcomeMap[choice.outcome];
+  const om = outcomeMap[result.outcome];
   badgeEl.className = `outcome-badge ${om.class}`;
   badgeEl.textContent = `${om.label} (${om.char})`;
   resultEl.textContent = `Running total: ${formatScore(totalToPar())}`;
-  caddieEl.textContent = choice.caddieText;
+  caddieEl.textContent = result.caddieText;
 
   outcomeEl.classList.remove('hidden');
   document.getElementById('confirm-btn').classList.add('hidden');
