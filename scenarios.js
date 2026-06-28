@@ -145,7 +145,7 @@ const COURSES = [
       },
       {
         number: 5, par: 3, yardage: 166,
-        situation: `The 5th plays 166 yards to a green perched above the Pacific Ocean. Today there's a 15mph wind straight into your face — effectively adding 20+ yards. The green slopes back-to-front and there's a deep bunker right. Miss long and you're in thick rough. Your 7-iron goes 170, your 9-iron goes 150.`,
+        situation: `The 5th plays 166 yards to a green perched above the Pacific Ocean. Today there's a 15mph wind straight into your face. The green slopes back-to-front and there's a deep bunker right. Miss long and you're in thick rough. Your 7-iron goes 170, your 9-iron goes 150.`,
         choices: [
           {
             label: '6-iron to the center of the green',
