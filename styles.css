@@ -84,46 +84,162 @@ html, body {
   font-style: italic;
 }
 
-.player-card {
-  margin: 0;
-  background: var(--surface2);
+/* ─── Hero Course Card ───────────────────────────────────────────────────── */
+.hero-course-card {
+  background: linear-gradient(155deg, #04111f 0%, #0c2540 55%, #0a2030 100%);
   border-bottom: 1px solid var(--border);
-  padding: 16px 24px;
+  padding: 28px 24px 26px;
+  position: relative;
+  overflow: hidden;
 }
-.player-card-title {
+.hero-course-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, var(--ocean) 40%, var(--fairway) 70%, transparent 100%);
+}
+
+.hero-eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--ocean);
+  margin-bottom: 10px;
+  opacity: 0.7;
+}
+.hero-course-name {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+.hero-course-location {
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+}
+.hero-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.hero-meta-pill {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-dim);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.hero-difficulty {
+  background: rgba(14,165,233,0.08);
+  border-color: rgba(14,165,233,0.4);
+  color: var(--ocean-bright);
+}
+.hero-course-desc {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.6;
+  margin-bottom: 22px;
+  font-style: italic;
+}
+.hero-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.hero-best {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--sand);
+  white-space: nowrap;
+}
+.hero-play-btn {
+  background: var(--ocean);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  padding: 15px 0;
+  font-family: var(--score-font);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  flex: 1;
+  transition: background 0.12s, transform 0.1s;
+}
+.hero-play-btn:active {
+  background: #0284c7;
+  transform: scale(0.98);
+}
+
+/* ─── Locked Courses ─────────────────────────────────────────────────────── */
+.locked-section {
+  padding: 24px 20px 0;
+}
+.locked-section-label {
   font-size: 9px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  color: var(--ocean);
+  color: var(--muted);
   margin-bottom: 12px;
-  text-align: center;
-  opacity: 0.7;
 }
-.player-stats {
+.locked-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding-bottom: 32px;
 }
-.player-stat {
-  text-align: center;
-  padding: 0 4px;
-  border-right: 1px solid var(--border);
+.locked-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 12px;
+  opacity: 0.45;
+  position: relative;
 }
-.player-stat:last-child { border-right: none; }
-.player-stat-val {
-  font-family: var(--score-font);
-  font-size: 22px;
+.locked-lock {
+  font-size: 13px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  opacity: 0.6;
+}
+.locked-card-name {
+  font-family: var(--serif);
+  font-size: 14px;
   font-weight: 700;
   color: var(--text);
-  display: block;
-  line-height: 1.1;
+  margin-bottom: 3px;
+  line-height: 1.25;
+  padding-right: 20px;
 }
-.player-stat-lbl {
+.locked-card-location {
   font-size: 10px;
   color: var(--muted);
-  margin-top: 2px;
+  margin-bottom: 10px;
   letter-spacing: 0.3px;
+}
+.locked-card-badge {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 2px 8px;
+  display: inline-block;
 }
 
 #course-grid {

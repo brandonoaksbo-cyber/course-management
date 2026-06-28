@@ -62,43 +62,59 @@ function renderCourseSelect() {
   const grid = document.getElementById('course-grid');
   grid.innerHTML = '';
 
-  COURSES.forEach(course => {
+  const available = COURSES.filter(c => c.available);
+  const locked = COURSES.filter(c => !c.available);
+
+  // Hero card for each available course
+  available.forEach(course => {
     const best = getBestScore(course.id);
     const bestStr = best !== null ? formatScore(best) : null;
 
-    const card = document.createElement('div');
-    card.className = `course-card${course.available ? '' : ' locked'}`;
-
-    const diffDots = Array.from({ length: 5 }, (_, i) =>
-      `<span class="diff-dot${i < course.difficultyLevel ? ' filled' : ''}"></span>`
-    ).join('');
-
-    card.innerHTML = `
-      <div class="course-card-header">
-        <div>
-          <div class="course-name">${course.name}</div>
-          <div class="course-location">${course.location}</div>
-        </div>
-        <div class="course-badge badge-${course.difficulty.toLowerCase().replace(' ', '-')}">${course.difficulty}</div>
+    const hero = document.createElement('div');
+    hero.className = 'hero-course-card';
+    hero.innerHTML = `
+      <div class="hero-eyebrow">Featured Course</div>
+      <div class="hero-course-name">${course.name}</div>
+      <div class="hero-course-location">${course.location}</div>
+      <div class="hero-meta">
+        <span class="hero-meta-pill">Par ${course.par}</span>
+        <span class="hero-meta-pill">${course.yardage.toLocaleString()} yds</span>
+        <span class="hero-meta-pill badge-legend hero-difficulty">${course.difficulty}</span>
       </div>
-      <div class="course-desc">${course.description}</div>
-      <div class="course-footer">
-        <div class="course-meta">
-          <span>${course.yardage} yds</span>
-          <span>Par ${course.par}</span>
-          ${bestStr ? `<span class="best-score">Best: ${bestStr}</span>` : ''}
-        </div>
-        <div class="diff-dots">${diffDots}</div>
+      <div class="hero-course-desc">${course.description}</div>
+      <div class="hero-footer">
+        ${bestStr ? `<div class="hero-best">Best: ${bestStr}</div>` : '<div></div>'}
+        <button class="hero-play-btn">Play Now →</button>
       </div>
-      ${!course.available ? '<div class="coming-soon-overlay">Coming Soon</div>' : ''}
     `;
-
-    if (course.available) {
-      card.addEventListener('click', () => startCourse(course));
-    }
-
-    grid.appendChild(card);
+    hero.querySelector('.hero-play-btn').addEventListener('click', () => startCourse(course));
+    grid.appendChild(hero);
   });
+
+  // Locked courses in a compact 2-col grid
+  if (locked.length > 0) {
+    const section = document.createElement('div');
+    section.className = 'locked-section';
+    section.innerHTML = `<div class="locked-section-label">More Courses — Coming Soon</div>`;
+
+    const lockedGrid = document.createElement('div');
+    lockedGrid.className = 'locked-grid';
+
+    locked.forEach(course => {
+      const card = document.createElement('div');
+      card.className = 'locked-card';
+      card.innerHTML = `
+        <div class="locked-lock">🔒</div>
+        <div class="locked-card-name">${course.name}</div>
+        <div class="locked-card-location">${course.location}</div>
+        <div class="locked-card-badge">${course.difficulty}</div>
+      `;
+      lockedGrid.appendChild(card);
+    });
+
+    section.appendChild(lockedGrid);
+    grid.appendChild(section);
+  }
 }
 
 // ─── Game Start ─────────────────────────────────────────────────────────────
