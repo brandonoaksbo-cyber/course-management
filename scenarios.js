@@ -45,7 +45,7 @@ const COURSES = [
       },
       {
         number: 2, par: 5, yardage: 502,
-        situation: `Hole 2 is a reachable par 5 at 502 yards — and you've striped your drive 280 yards down the right side, leaving 222 yards to the flag. But a 12mph headwind is blowing in off the Pacific, and the green is guarded by a deep bunker short-right. Your 5-wood carries 220 in calm air.`,
+        situation: `Hole 2 is a par 5 at 502 yards — and you've striped your drive 280 yards down the right side, leaving 222 yards to the flag. A 12mph headwind is blowing in off the Pacific. The green is guarded by a deep bunker short-right. Your 5-wood carries 220 in calm air.`,
         choices: [
           {
             label: 'Lay back to 70 yards with a 9-iron',
@@ -79,7 +79,7 @@ const COURSES = [
       },
       {
         number: 3, par: 4, yardage: 388,
-        situation: `The 3rd plays 388 yards with a subtle dogleg left. The fairway is only 22 yards wide at the 250-yard mark, where trees squeeze in from both sides. There's no wind today — a rare calm on the Monterey Peninsula. A 3-wood leaves ~160 yards in; driver could leave just over 100.`,
+        situation: `The 3rd plays 388 yards with a subtle dogleg left. The fairway is only 22 yards wide at the 250-yard mark, where trees squeeze in from both sides. There's no wind today — a rare calm on the Monterey Peninsula.`,
         choices: [
           {
             label: '3-wood for precision',
@@ -178,7 +178,7 @@ const COURSES = [
       },
       {
         number: 6, par: 5, yardage: 513,
-        situation: `Hole 6 plays uphill into the prevailing wind — 513 yards from the tees, but playing at least 530+ today with a 12mph headwind. You've hit driver 275 yards and have 238 yards uphill into the wind to a green guarded by a deep left bunker. Your 5-wood carries 220 in calm air.`,
+        situation: `Hole 6 plays uphill into the prevailing wind — 513 yards, 12mph headwind. You've hit driver 275 yards and have 238 yards uphill to a green guarded by a deep left bunker. Your 5-wood carries 220 in calm air.`,
         choices: [
           {
             label: 'Lay up to 70 yards — 9-iron then wedge',
@@ -278,7 +278,7 @@ const COURSES = [
       },
       {
         number: 9, par: 4, yardage: 464,
-        situation: `Hole 9 is a long, demanding par 4 at 464 yards running alongside Stillwater Cove — the ocean is on your right the entire length of the hole. A 15mph tailwind is helping today, making it play like 445. The fairway tilts toward the ocean on the right side. If you flush driver, you could have as little as 175 yards in.`,
+        situation: `Hole 9 is a long par 4 at 464 yards running alongside Stillwater Cove — the ocean is on your right the entire length of the hole. A 15mph tailwind is helping today. The fairway tilts toward the ocean on the right side.`,
         choices: [
           {
             label: 'Driver down the left side',
@@ -311,7 +311,7 @@ const COURSES = [
       },
       {
         number: 10, par: 4, yardage: 446,
-        situation: `The 10th begins the famous Pebble Beach cliff stretch. It's 446 yards slightly uphill into the prevailing wind — 12mph into your face today. You've hit driver 275 yards and have 171 yards to the flag. The wind makes it play like 190 yards. The green is on a shelf above the cliff; anything short-right falls away toward the Pacific.`,
+        situation: `The 10th begins the famous Pebble Beach cliff stretch. 446 yards, slightly uphill, 12mph into your face. You've hit driver 275 yards and have 171 yards to the flag. The green is on a shelf above the cliff; anything short-right falls away toward the Pacific.`,
         choices: [
           {
             label: '6-iron to the center of the green',
@@ -344,7 +344,7 @@ const COURSES = [
       },
       {
         number: 11, par: 4, yardage: 380,
-        situation: `Hole 11 is a relatively straightforward par 4 at 380 yards — a brief rest from the cliff drama. But you've made a mistake off the tee: pushed driver into the right rough, leaving a semi-blocked lie in 4-inch rough with 164 yards to the flag. A tree branch is in your intended swing path if you go straight at the pin.`,
+        situation: `Hole 11, par 4, 380 yards. You've pushed driver into the right rough — semi-blocked lie in 4-inch rough, 164 yards to the flag. A tree branch is in your swing path if you go straight at the pin.`,
         choices: [
           {
             label: 'Punch out to 70 yards — take your medicine',
@@ -377,7 +377,7 @@ const COURSES = [
       },
       {
         number: 12, par: 3, yardage: 202,
-        situation: `The 12th is a long par 3 at 202 yards over a stretch of beach to a wide green that slopes gently back-to-front. Today there's almost no wind — a truly rare gift on the Monterey Peninsula. With calm conditions, this plays as a pure distance management hole. The only mistake is overthinking it.`,
+        situation: `The 12th is a par 3 at 202 yards over a stretch of beach to a wide green that slopes gently back-to-front. Today there's almost no wind — a rare calm on the Monterey Peninsula.`,
         choices: [
           {
             label: '4-iron at the back pin',
@@ -410,7 +410,7 @@ const COURSES = [
       },
       {
         number: 13, par: 4, yardage: 399,
-        situation: `The 13th is a dogleg-left par 4 at 399 yards. You've hit a great drive to the left side of the fairway — 139 yards to the flag. But the pin is tucked front-left behind a deep pot bunker. Hit it right and you've got a 20-foot birdie putt. Hit it left and you're in the bunker facing a near-impossible par save.`,
+        situation: `The 13th is a dogleg-left par 4 at 399 yards. You've hit a great drive to the left side of the fairway — 139 yards to the flag. The pin is tucked front-left behind a deep pot bunker.`,
         choices: [
           {
             label: 'Knock-down 8-iron, center of the green',
@@ -443,7 +443,7 @@ const COURSES = [
       },
       {
         number: 14, par: 5, yardage: 573,
-        situation: `The 14th is the longest hole at Pebble Beach — 573 yards. Even with driver, you'll have 290+ yards remaining. This is a three-shot par 5 no matter what you do. You've hit driver 280 yards, leaving 293 yards. Wind is cross-left-to-right at 10mph. The fairway is generous, but the approach into the green is well-guarded.`,
+        situation: `The 14th is the longest hole at Pebble Beach — 573 yards. You've hit driver 280 yards, leaving 293 yards. Wind is cross-left-to-right at 10mph. The fairway is generous, but the approach into the green is well-guarded.`,
         choices: [
           {
             label: 'Calibrated layup to 70 yards',
@@ -477,7 +477,7 @@ const COURSES = [
       },
       {
         number: 15, par: 4, yardage: 397,
-        situation: `The 15th at Pebble is a medium-length par 4 at 397 yards into the prevailing wind (10mph). You've hit a solid drive to 270 yards, leaving 127 yards. Pin is middle-right. There's a bunker short-right and the green is running firm today — a ball that flies all the way to the hole will have trouble stopping.`,
+        situation: `The 15th is a par 4 at 397 yards, 10mph into your face. You've hit a solid drive to 270 yards, leaving 127 yards. Pin is middle-right. There's a bunker short-right and the green is running firm today.`,
         choices: [
           {
             label: '9-iron to a landing spot short of the flag',
@@ -510,7 +510,7 @@ const COURSES = [
       },
       {
         number: 16, par: 4, yardage: 402,
-        situation: `Hole 16 is a sweeping left-to-right dogleg par 4 at 402 yards. Wind is blowing right-to-left today — which hurts a fade and helps a draw. The inside of the dogleg has trees. Cutting the corner means carrying 255 yards over the trees. Playing the full dogleg left-center leaves ~122 yards in.`,
+        situation: `Hole 16 is a sweeping left-to-right dogleg par 4 at 402 yards. Wind is blowing right-to-left today. The inside of the dogleg has trees. Cutting the corner means carrying 255 yards over the trees.`,
         choices: [
           {
             label: 'Driver up the left side, play the dogleg',
@@ -543,7 +543,7 @@ const COURSES = [
       },
       {
         number: 17, par: 3, yardage: 208,
-        situation: `The 17th at Pebble Beach. You've thought about this hole a hundred times. 208 yards, the ocean hugging the entire left side, the green angled toward the water. Today: 18mph wind directly into your face, making it play like 240+ yards. The flag is center-left — dangerously close to the ocean side. Jack Nicklaus hit a 1-iron here in 1972. What do you hit?`,
+        situation: `The 17th at Pebble Beach. 208 yards, the ocean hugging the entire left side, the green angled toward the water. Today: 18mph wind directly into your face. The flag is center-left. Jack Nicklaus hit a 1-iron here in 1972.`,
         choices: [
           {
             label: '3-wood aimed center-right of the green',
@@ -576,7 +576,7 @@ const COURSES = [
       },
       {
         number: 18, par: 5, yardage: 543,
-        situation: `The most famous finishing hole in golf. 543 yards hugging Stillwater Cove, the Pacific Ocean the entire left side from tee to green. You need a birdie to post a great score. Your drive of 278 yards left you on the right side of the fairway — 265 yards to the flag. Wind is 8mph off the ocean, left to right. The green is guarded on the left by the sea wall.`,
+        situation: `The most famous finishing hole in golf. 543 yards hugging Stillwater Cove, the Pacific Ocean the entire left side from tee to green. Your drive of 278 yards left you on the right side of the fairway — 265 yards to the flag. Wind is 8mph off the ocean, left to right. The green is guarded on the left by the sea wall.`,
         choices: [
           {
             label: 'Lay up right, money wedge from 70 yards',
