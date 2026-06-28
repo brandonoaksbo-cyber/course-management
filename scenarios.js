@@ -59,7 +59,7 @@ const COURSES = [
           },
           {
             label: '5-wood at the green',
-            detail: 'Go for it in two. The headwind makes your 5-wood play like a 3-wood — you need 222 yards of carry to clear the bunker.',
+            detail: 'Go for it in two. 222 yards to carry the front bunker. 12mph headwind into your face.',
             outcomes: [
               { outcome: 'par',    score:  0, weight: 10, caddieText: `Somehow flushed the 5-wood through the headwind — caught the front edge and rolled to 28 feet. Two putts. Par. Shouldn't have worked. Did.` },
               { outcome: 'bogey', score:  1, weight: 40, caddieText: `Into 12mph of headwind, your 5-wood came up short in the bunker. Blasted to 22 feet. Three-putted. Bogey. The math was never there.` },
