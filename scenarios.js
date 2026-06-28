@@ -112,7 +112,7 @@ const COURSES = [
       },
       {
         number: 4, par: 4, yardage: 331,
-        situation: `The 4th at Pebble Beach is a short, sharp par 4 at 331 yards. OB stakes line the entire right side, and the green is well-guarded with a drop-off left. A left-to-right breeze is blowing. The green is theoretically driveable — but so is the OB. The hole rewards clever thinking, not bravado.`,
+        situation: `The 4th at Pebble Beach is a short, sharp par 4 at 331 yards. OB stakes line the entire right side, and the green is well-guarded with a drop-off left. A left-to-right breeze is blowing. The green is theoretically driveable — but so is the OB.`,
         choices: [
           {
             label: 'Driver with a hard draw — go for the green',
@@ -120,25 +120,25 @@ const COURSES = [
             outcomes: [
               { outcome: 'par',    score:  0, weight:  8, caddieText: `Drew it perfect, hit the front of the green, rolled to 22 feet. Two putts. Par. You drove the green at Pebble hole 4. Completely insane. It worked.` },
               { outcome: 'bogey', score:  1, weight: 32, caddieText: `Overdrew it, went through the green into a swale left. Chip to 12 feet. Missed the par save. Bogey. The OB was on your right and you somehow found the drop-off on the left.` },
-              { outcome: 'double', score: 2, weight: 60, caddieText: `OB right. Drawing a driver toward OB on a 331-yard hole with a left-to-right wind was always going to end this way. Drop, wedge, two putts. Double bogey. Golf gives you what you deserve.` }
+              { outcome: 'double', score: 2, weight: 60, caddieText: `OB right. Drop, wedge, two putts. Double bogey. Golf gives you what you deserve.` }
             ]
           },
           {
-            label: 'Hybrid to 70 yards',
-            detail: 'Take a controlled hybrid — lands at 261 yards, leaving 70 yards. Your money wedge from a safe position.',
+            label: '3-wood, leave a wedge in',
+            detail: '3-wood carries 250 yards, leaving 81 yards. OB completely eliminated. A comfortable wedge distance.',
             outcomes: [
-              { outcome: 'birdie', score: -1, weight: 30, caddieText: `Hybrid to 70 yards, money wedge to 4 feet. Drained it. Birdie. This is exactly how this hole is supposed to be played. You played it correctly.` },
-              { outcome: 'par',    score:  0, weight: 50, caddieText: `Hybrid to 70 yards, wedge to 5 feet — and then you missed the birdie putt. Left edge, never had a chance. Tap-in par. Should've been birdie. This is golf.` },
-              { outcome: 'bogey', score:  1, weight: 20, caddieText: `Hybrid to 70 yards, wedge came out heavy — rolled to 22 feet. Three-putted. Bogey. Three putts from 22 feet. That one's on you.` }
+              { outcome: 'birdie', score: -1, weight: 30, caddieText: `3-wood to 81 yards, wedge to 4 feet. Drained it. Birdie.` },
+              { outcome: 'par',    score:  0, weight: 50, caddieText: `3-wood to 81 yards, wedge to 6 feet — and then you missed the birdie putt. Left edge, never had a chance. Tap-in par. This is golf.` },
+              { outcome: 'bogey', score:  1, weight: 20, caddieText: `3-wood to 81 yards, wedge came out heavy — rolled to 22 feet. Three-putted. Bogey. Three putts from 22 feet. That one's on you.` }
             ]
           },
           {
-            label: '3-wood to 120 yards',
-            detail: 'Conservative 3-wood to 120 yards. Safe, leaves a pitching wedge distance approach.',
+            label: 'Hybrid, leave a full approach',
+            detail: 'Hybrid carries 230 yards, leaving 101 yards — a controlled 9-iron into the green.',
             outcomes: [
-              { outcome: 'birdie', score: -1, weight: 10, caddieText: `3-wood to 118 yards, pitching wedge to 6 feet. Made it. Birdie. The extra-conservative play made birdie. Don't try to figure out why. Just sign the card.` },
-              { outcome: 'par',    score:  0, weight: 45, caddieText: `3-wood to 118 yards, pitching wedge to 16 feet. Two putts. Par. Nothing to write home about. Nothing to regret either.` },
-              { outcome: 'bogey', score:  1, weight: 45, caddieText: `3-wood to 118 yards — not your best yardage. Pitching wedge a bit thin, bounced over the back. Chip to 14 feet. Missed. Bogey. 70 yards is a different shot than 120 for you.` }
+              { outcome: 'birdie', score: -1, weight: 10, caddieText: `Hybrid to 101 yards, 9-iron to 8 feet. Made the birdie putt. The extra distance to think about it didn't hurt you today.` },
+              { outcome: 'par',    score:  0, weight: 45, caddieText: `Hybrid to 101 yards, 9-iron to 18 feet. Two putts. Par. Clean and simple.` },
+              { outcome: 'bogey', score:  1, weight: 45, caddieText: `Hybrid to 101 yards, 9-iron a bit thin — ran through the back. Chip to 14 feet. Missed. Bogey.` }
             ]
           }
         ]
