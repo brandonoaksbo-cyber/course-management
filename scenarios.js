@@ -12,7 +12,7 @@ const COURSES = [
     holes: [
       {
         number: 1, par: 4, yardage: 377,
-        situation: `You step onto the 1st tee at Pebble Beach. The Pacific Ocean glistens to your right. It's a gentle opener — 377 yards, slight dogleg right — but a 10mph breeze is blowing left to right off the water. The fairway narrows at 250 yards where trees pinch from the right. Two bunkers guard the left side at 260 yards.`,
+        situation: `You step onto the 1st tee at Pebble Beach. The Pacific Ocean glistens to your right. 377 yards, slight dogleg right, 10mph breeze blowing left to right off the water. The fairway narrows at 250 yards where trees pinch from the right. Two bunkers guard the left side at 260 yards.`,
         choices: [
           {
             label: 'Driver, aim at the left bunkers',
@@ -45,7 +45,7 @@ const COURSES = [
       },
       {
         number: 2, par: 5, yardage: 502,
-        situation: `Hole 2 is a par 5 at 502 yards — and you've striped your drive 280 yards down the right side, leaving 222 yards to the flag. A 12mph headwind is blowing in off the Pacific. The green is guarded by a deep bunker short-right. Your 5-wood carries 220 in calm air.`,
+        situation: `Hole 2 is a par 5 at 502 yards — and you've striped your drive 280 yards down the right side, leaving 222 yards to the flag. A 12mph headwind is blowing in off the Pacific. The green is guarded by a deep bunker short-right.`,
         choices: [
           {
             label: 'Lay back to 70 yards with a 9-iron',
@@ -58,12 +58,12 @@ const COURSES = [
             ]
           },
           {
-            label: '5-wood at the green',
-            detail: 'Go for it in two. 222 yards to carry the front bunker. 12mph headwind into your face.',
+            label: '3-wood at the green',
+            detail: 'Go for it in two. 3-wood at full effort — 222 yards to carry the front bunker, 12mph headwind into your face.',
             outcomes: [
-              { outcome: 'par',    score:  0, weight: 10, caddieText: `Somehow flushed the 5-wood through the headwind — caught the front edge and rolled to 28 feet. Two putts. Par. Shouldn't have worked. Did.` },
-              { outcome: 'bogey', score:  1, weight: 40, caddieText: `Into 12mph of headwind, your 5-wood came up short in the bunker. Blasted to 22 feet. Three-putted. Bogey. The math was never there.` },
-              { outcome: 'double', score: 2, weight: 50, caddieText: `5-wood ballooned into the headwind, dropped in the front bunker. Blasted over the green. Chip, two putts. Double bogey. The layup to 70 yards was right there the entire time.` }
+              { outcome: 'par',    score:  0, weight: 10, caddieText: `Flushed it — ball bored through the headwind, caught the front edge and rolled to 28 feet. Two putts. Par. That was a career 3-wood.` },
+              { outcome: 'bogey', score:  1, weight: 40, caddieText: `3-wood came up just short in the bunker. Blasted to 22 feet. Three-putted. Bogey.` },
+              { outcome: 'double', score: 2, weight: 50, caddieText: `3-wood ballooned into the headwind, dropped in the front bunker. Blasted over the green. Chip, two putts. Double bogey.` }
             ]
           },
           {
@@ -79,11 +79,11 @@ const COURSES = [
       },
       {
         number: 3, par: 4, yardage: 388,
-        situation: `The 3rd plays 388 yards with a subtle dogleg left. The fairway is only 22 yards wide at the 250-yard mark, where trees squeeze in from both sides. There's no wind today — a rare calm on the Monterey Peninsula.`,
+        situation: `The 3rd plays 388 yards with a subtle dogleg left. The fairway is only 22 yards wide at the 265-yard mark, where trees squeeze in from both sides. There's no wind today — a rare calm on the Monterey Peninsula.`,
         choices: [
           {
-            label: '3-wood for precision',
-            detail: 'Take 3-wood — lands at 228 yards, leaving 160 yards. A controlled 7-iron approach to a green you can attack.',
+            label: '3-wood, lay up short of the trees',
+            detail: 'Take 3-wood — lands at 228 yards, 37 yards short of the tight section. Leaving 160 yards.',
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 25, caddieText: `3-wood, fairway, 7-iron to 11 feet. Read it left-to-right, drained it. Birdie. This is what hitting the fairway on purpose gets you.` },
               { outcome: 'par',    score:  0, weight: 55, caddieText: `3-wood found the short grass, 7-iron to 18 feet. Misread the break. Two putts for par. Right play, one missed read. You'll take it.` },
@@ -92,7 +92,7 @@ const COURSES = [
           },
           {
             label: 'Driver aimed at the right side',
-            detail: 'Trust your driver and aim for the right half of the fairway, trying to thread the gap.',
+            detail: 'Thread the driver through the 22-yard gap at 265. Right half of the fairway. 280 yards leaves 108.',
             outcomes: [
               { outcome: 'par',    score:  0, weight: 10, caddieText: `Hit it a bit left of where you aimed and found the fairway by 2 feet. Lucky. Wedge to 12 feet, made the par putt. Don't tell anyone that worked.` },
               { outcome: 'bogey', score:  1, weight: 35, caddieText: `Right rough, as expected. Ball sat down. Punched it out 60 yards sideways, wedge to 22 feet. Missed the par putt left. Bogey. The narrow fairway was trying to warn you.` },
@@ -101,7 +101,7 @@ const COURSES = [
           },
           {
             label: 'Driver straight down the middle',
-            detail: 'Grip and rip — 280 yards leaves just 108 yards, a soft wedge. Maximum birdie potential.',
+            detail: 'Grip and rip — 280 yards carries through the 265-yard pinch and leaves 108 yards.',
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 15, caddieText: `Flushed it dead center, 108 yards. Sand wedge to 7 feet and drained it. Birdie. Got away with the driver AND made birdie. Not sustainable, but fun.` },
               { outcome: 'par',    score:  0, weight: 40, caddieText: `Found the fairway narrowly. 108 yards left, sand wedge over the back of the green. Chip to 10 feet. Made the par putt. Driver worked — barely.` },
@@ -112,11 +112,11 @@ const COURSES = [
       },
       {
         number: 4, par: 4, yardage: 331,
-        situation: `The 4th at Pebble Beach is a short, sharp par 4 at 331 yards. OB stakes line the entire right side, and the green is well-guarded with a drop-off left. A left-to-right breeze is blowing. The green is theoretically driveable — but so is the OB.`,
+        situation: `The 4th at Pebble Beach is a par 4 at 331 yards. OB stakes line the entire left side, and the green is guarded by a drop-off right. A left-to-right breeze is blowing.`,
         choices: [
           {
             label: 'Driver with a hard draw — go for the green',
-            detail: `Try to drive the green with a big draw. 331 yards, wind is left-to-right — you'd need to fight it the whole way.`,
+            detail: `Try to drive the green with a big draw. 331 yards, wind is left-to-right — draw goes toward OB left the whole way.`,
             outcomes: [
               { outcome: 'par',    score:  0, weight:  8, caddieText: `Drew it perfect, hit the front of the green, rolled to 22 feet. Two putts. Par. You drove the green at Pebble hole 4. Completely insane. It worked.` },
               { outcome: 'bogey', score:  1, weight: 32, caddieText: `Overdrew it, went through the green into a swale left. Chip to 12 feet. Missed the par save. Bogey. The OB was on your right and you somehow found the drop-off on the left.` },
@@ -125,7 +125,7 @@ const COURSES = [
           },
           {
             label: '3-wood, leave a wedge in',
-            detail: '3-wood carries 250 yards, leaving 81 yards. OB completely eliminated. A comfortable wedge distance.',
+            detail: '3-wood carries 250 yards, leaving 81 yards. Tighter dispersion than driver, but OB left is still in play on a hook.',
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 30, caddieText: `3-wood to 81 yards, wedge to 4 feet. Drained it. Birdie.` },
               { outcome: 'par',    score:  0, weight: 50, caddieText: `3-wood to 81 yards, wedge to 6 feet — and then you missed the birdie putt. Left edge, never had a chance. Tap-in par. This is golf.` },
@@ -145,7 +145,7 @@ const COURSES = [
       },
       {
         number: 5, par: 3, yardage: 166,
-        situation: `The 5th plays 166 yards to a green perched above the Pacific Ocean. Today there's a 15mph wind straight into your face. The green slopes back-to-front and there's a deep bunker right. Miss long and you're in thick rough. Your 7-iron goes 170, your 9-iron goes 150.`,
+        situation: `The 5th plays 166 yards to a green perched above the Pacific Ocean. Today there's a 15mph wind straight into your face. The green slopes back-to-front and there's a deep bunker right. Your 7-iron goes 170, your 9-iron goes 150.`,
         choices: [
           {
             label: '6-iron to the center of the green',
@@ -178,25 +178,25 @@ const COURSES = [
       },
       {
         number: 6, par: 5, yardage: 513,
-        situation: `Hole 6 plays uphill into the prevailing wind — 513 yards, 12mph headwind. You've hit driver 275 yards and have 238 yards uphill to a green guarded by a deep left bunker. Your 5-wood carries 220 in calm air.`,
+        situation: `Hole 6 plays uphill into the prevailing wind — 513 yards, 12mph headwind. You've hit driver 275 yards and have 238 yards uphill to a green guarded by a deep left bunker.`,
         choices: [
           {
             label: 'Lay up to 70 yards — 9-iron then wedge',
-            detail: '9-iron for 150 yards, leaving 88 yards — within wedge range. Set up the scoring shot you own.',
+            detail: '9-iron for 150 yards, leaving 88 yards — your money wedge distance.',
             outcomes: [
               { outcome: 'eagle',  score: -2, weight:  2, caddieText: `9-iron to 88 yards, hit the wedge — holed it. Eagle on an uphill par 5 into a headwind. You are statistically insane. Tell everyone you know.` },
-              { outcome: 'birdie', score: -1, weight: 28, caddieText: `Laid up to 88 yards. Wedge to 5 feet. Made it. Birdie on an uphill par 5 into the wind. Smart golf beats hero golf nine times out of ten.` },
-              { outcome: 'par',    score:  0, weight: 48, caddieText: `Laid up to 88 yards. Wedge to 14 feet. Misread it. Par. On an uphill par 5 into the wind, par is perfectly fine. The layup was right.` },
-              { outcome: 'bogey', score:  1, weight: 22, caddieText: `Laid up well but hit the wedge a bit heavy — came up short. Chip to 16 feet. Missed the par putt. Bogey. The plan was right. The wedge wasn't quite right.` }
+              { outcome: 'birdie', score: -1, weight: 28, caddieText: `Laid up to 88 yards. Wedge to 5 feet. Made it. Birdie.` },
+              { outcome: 'par',    score:  0, weight: 48, caddieText: `Laid up to 88 yards. Wedge to 14 feet. Misread it. Par.` },
+              { outcome: 'bogey', score:  1, weight: 22, caddieText: `Laid up well but hit the wedge heavy — came up short. Chip to 16 feet. Missed. Bogey.` }
             ]
           },
           {
-            label: '5-wood at the green',
-            detail: 'Try to reach in two. Uphill into headwind, your 5-wood plays to about 195 yards — well short of the green.',
+            label: '3-wood, go for the green',
+            detail: '3-wood at full effort — 238 yards uphill into a 12mph headwind to carry the left bunker.',
             outcomes: [
-              { outcome: 'par',    score:  0, weight:  8, caddieText: `Somehow flushed the 5-wood uphill into the wind — hit the front edge and rolled on. 30 feet away. Two putts. Par. That shot had no business working. But here we are.` },
-              { outcome: 'bogey', score:  1, weight: 42, caddieText: `5-wood came up 40 yards short in the left rough. Wedge to 20 feet. Missed the par putt. Bogey. Uphill plus headwind plus 238 yards was never going to work.` },
-              { outcome: 'double', score: 2, weight: 50, caddieText: `5-wood into a headwind, uphill. It barely cleared the rough 200 yards out. Still had 40 yards, hit a poor chip, three-putted. Double bogey. The layup to 70 yards was always right.` }
+              { outcome: 'par',    score:  0, weight:  8, caddieText: `Flushed it uphill into the wind — somehow caught the front edge and rolled on. 30 feet away. Two putts. Par. Career shot.` },
+              { outcome: 'bogey', score:  1, weight: 42, caddieText: `3-wood came up short in the left rough, 40 yards out. Wedge to 20 feet. Missed. Bogey.` },
+              { outcome: 'double', score: 2, weight: 50, caddieText: `3-wood ballooned uphill into the headwind, dumped in the left bunker. Blasted over the green. Chip, two putts. Double bogey.` }
             ]
           },
           {
@@ -245,11 +245,11 @@ const COURSES = [
       },
       {
         number: 8, par: 4, yardage: 418,
-        situation: `The 8th hole at Pebble Beach is one of the most dramatic in golf — a blind tee shot over a chasm to a fairway that doglegs left along the cliffs, the Pacific 100 feet below on your right. You've driven it well: 275 yards, 143 yards left to the flag. The pin is tucked right behind a greenside bunker. The ocean is still in play right.`,
+        situation: `The 8th at Pebble Beach — a blind tee shot over a chasm to a fairway that doglegs left along the cliffs, the Pacific 100 feet below on your right. Your drive: 275 yards, 143 yards left to the flag. The pin is tucked right behind a greenside bunker. The ocean is right.`,
         choices: [
           {
             label: '9-iron to the left half of the green',
-            detail: 'Miss left, miss safe. Aim for the middle-left of the green — takes the bunker and ocean out of play entirely.',
+            detail: 'Aim for the middle-left of the green. Bunker is short-right, ocean is right.',
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 20, caddieText: `9-iron to the left half, 22 feet. Read the putt correctly and drained it. Birdie. Aiming away from the flag and making birdie anyway — that's playing smart golf.` },
               { outcome: 'par',    score:  0, weight: 55, caddieText: `9-iron to the left half — 26 feet away. Two solid putts for par. Avoided the ocean, avoided the bunker, made par. The miss always goes left on this hole.` },
@@ -258,7 +258,7 @@ const COURSES = [
           },
           {
             label: '9-iron straight at the flag',
-            detail: `Attack the right-side pin directly. 143 yards, 9-iron distance — flush it and you're looking at a tap-in birdie.`,
+            detail: `Go directly at the right-side pin. 143 yards, 9-iron distance. Bunker and cliff are right.`,
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 12, caddieText: `Aimed right at the flag, hit it pure to 7 feet. Drained the birdie putt. Aggressive play, perfect execution. The bunker and the ocean were both wrong today.` },
               { outcome: 'par',    score:  0, weight: 28, caddieText: `Aimed at the flag, caught the green edge right — 18 feet away. Two putts for par. Got away with the aggressive line. Lucky. The miss has to go left on this hole.` },
@@ -278,7 +278,7 @@ const COURSES = [
       },
       {
         number: 9, par: 4, yardage: 464,
-        situation: `Hole 9 is a long par 4 at 464 yards running alongside Stillwater Cove — the ocean is on your right the entire length of the hole. A 15mph tailwind is helping today. The fairway tilts toward the ocean on the right side.`,
+        situation: `Hole 9 is a long par 4 at 464 yards running alongside Stillwater Cove — the ocean is on your right the entire length of the hole. 15mph tailwind. The fairway tilts toward the ocean on the right side.`,
         choices: [
           {
             label: 'Driver down the left side',
@@ -299,12 +299,12 @@ const COURSES = [
             ]
           },
           {
-            label: '3-wood down the center',
-            detail: 'Play safe, 230 yards, leaves 234 yards. A hybrid or long iron second shot, well away from the ocean.',
+            label: 'Driver with a cut — hold it against the tilt',
+            detail: 'Start the driver at center-left and fade it to fight the rightward tilt. Tailwind still adds carry. Leaves ~185 yards.',
             outcomes: [
-              { outcome: 'par',    score:  0, weight: 40, caddieText: `3-wood to center, hybrid to the front edge, two putts for par. Nothing went wrong. Nothing went right. Par on a 464-yard par 4 — that's fine.` },
-              { outcome: 'bogey', score:  1, weight: 45, caddieText: `3-wood safe, hybrid second to 35 feet. Hit a poor lag 8 feet past. Missed the par putt. Bogey. The tailwind made this a birdie hole today and you played it like a survival hole.` },
-              { outcome: 'birdie', score: -1, weight: 15, caddieText: `3-wood, hybrid to 12 feet. Made the birdie putt. Sometimes laying back and hitting a better second shot works out better than a hero driver. Today it did.` }
+              { outcome: 'birdie', score: -1, weight: 20, caddieText: `Cut driver held perfectly against the tilt — center fairway, 185 yards left. 7-iron to 10 feet. Made it. Birdie. Fighting the slope with shot shape instead of hoping it stops.` },
+              { outcome: 'par',    score:  0, weight: 45, caddieText: `Cut held, landed center fairway. 185 yards left, 7-iron to 20 feet. Two putts. Par. The fade did exactly what you needed it to do.` },
+              { outcome: 'bogey', score:  1, weight: 35, caddieText: `Overdid the cut — ball went left and into the trees. Punched out, 50 yards short of the green. Chip to 18 feet. Missed. Bogey. Too much fade trying to fight the slope.` }
             ]
           }
         ]
@@ -333,7 +333,7 @@ const COURSES = [
           },
           {
             label: '7-iron at maximum effort',
-            detail: 'Swing harder than normal to fight through the wind and squeeze 185 yards out of your 7-iron.',
+            detail: 'Swing harder than normal to try to force it through the 12mph headwind. Your 7-iron goes 170 in calm air.',
             outcomes: [
               { outcome: 'par',    score:  0, weight:  5, caddieText: `Swung out of your shoes and somehow flushed it 180 yards into the wind. Front of the green, 30 feet. Two putts. Par. That was lucky and everyone watching knew it.` },
               { outcome: 'bogey', score:  1, weight: 35, caddieText: `Hard 7-iron ballooned in the headwind — went 152 yards and landed short of the shelf. Chip to 15 feet. Missed. Bogey. Swinging harder adds spin, which makes the ball balloon more. Every time.` },
@@ -410,7 +410,7 @@ const COURSES = [
       },
       {
         number: 13, par: 4, yardage: 399,
-        situation: `The 13th is a dogleg-left par 4 at 399 yards. You've hit a great drive to the left side of the fairway — 139 yards to the flag. The pin is tucked front-left behind a deep pot bunker.`,
+        situation: `The 13th is a dogleg-left par 4 at 399 yards. Your drive found the left side of the fairway — 139 yards to the flag. The pin is tucked front-left behind a deep pot bunker.`,
         choices: [
           {
             label: 'Knock-down 8-iron, center of the green',
@@ -423,7 +423,7 @@ const COURSES = [
           },
           {
             label: '9-iron to the right half of the green',
-            detail: 'Miss right, miss safe — 9-iron at the right half takes the bunker completely out of play.',
+            detail: '9-iron at the right half of the green. Pot bunker is front-left.',
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 15, caddieText: `9-iron to the right half — 20 feet away. Hit a nice left-to-right breaking putt that fell in. Birdie. The safe play and a good read. Best of both worlds.` },
               { outcome: 'par',    score:  0, weight: 55, caddieText: `9-iron to the right half — bunker never in play. 22 feet. Two putts for par. Smart play, smart score. The pros call this course management.` },
@@ -432,7 +432,7 @@ const COURSES = [
           },
           {
             label: '9-iron straight at the flag',
-            detail: `Attack the front-left pin directly. 139 yards, 9-iron — if you flush it, it's birdie range.`,
+            detail: `Go directly at the front-left pin. 139 yards, 9-iron. Pot bunker is between you and the flag.`,
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 10, caddieText: `9-iron at the flag caught the green 3 feet right of the bunker edge and released to 8 feet. Made the birdie putt. Got away with the aggressive line completely.` },
               { outcome: 'bogey', score:  1, weight: 45, caddieText: `9-iron at the sucker flag found the pot bunker by 2 feet. Blasted to 12 feet. Missed the par save. Bogey. The sucker flag has been doing this since 1919.` },
@@ -443,7 +443,7 @@ const COURSES = [
       },
       {
         number: 14, par: 5, yardage: 573,
-        situation: `The 14th is the longest hole at Pebble Beach — 573 yards. You've hit driver 280 yards, leaving 293 yards. Wind is cross-left-to-right at 10mph. The fairway is generous, but the approach into the green is well-guarded.`,
+        situation: `The 14th is a par 5 at 573 yards. You've hit driver 280 yards, leaving 293 yards. Wind is cross-left-to-right at 10mph. Bunkers guard both sides of the green.`,
         choices: [
           {
             label: 'Calibrated layup to 70 yards',
@@ -457,7 +457,7 @@ const COURSES = [
           },
           {
             label: '3-wood as far as possible',
-            detail: 'Hit 3-wood for max distance, leaving ~55 yards. Gets you close to birdie range on the third.',
+            detail: 'Hit 3-wood for max distance into the crosswind. Leaves roughly 50 yards for the third shot.',
             outcomes: [
               { outcome: 'birdie', score: -1, weight: 12, caddieText: `3-wood 242 yards into the cross-wind — perfect line. 51 yards left, hit the wedge to 6 feet. Made birdie. Maximum distance to a great yardage. It happens.` },
               { outcome: 'par',    score:  0, weight: 38, caddieText: `3-wood 240 yards but the crosswind pushed it into the first cut — 53 yards, bad lie. Hit a decent wedge to 16 feet. Two putts. Par. The rough cost you a clean third shot.` },
@@ -498,12 +498,12 @@ const COURSES = [
             ]
           },
           {
-            label: 'Sand wedge at full effort',
-            detail: 'Swing your sand wedge hard to reach 127 yards. Try to stop it dead on a firm green.',
+            label: 'Punched 7-iron, bump-and-run',
+            detail: 'Flight a low 7-iron punch, land it short, let the firm green release it toward the flag. 127 yards.',
             outcomes: [
-              { outcome: 'par',    score:  0, weight:  8, caddieText: `Hard sand wedge somehow came out soft — landed softly 10 feet from the flag. Made the par putt. That was a mistake that worked out. Don't learn the wrong lesson.` },
-              { outcome: 'bogey', score:  1, weight: 42, caddieText: `Hard sand wedge from 127 yards hit, checked, spun back 8 yards short. Chip to 15 feet. Missed. Bogey. Full-swing sand wedges on firm greens grab and spin. Every time.` },
-              { outcome: 'double', score: 2, weight: 50, caddieText: `Hard sand wedge hit, checked violently, spun off the green into the right bunker. Blasted over the green. Chip back, three putts total. Double bogey. The 9-iron for 127 yards is not a difficult concept.` }
+              { outcome: 'birdie', score: -1, weight:  8, caddieText: `Low punch 7-iron checked perfectly and released to 6 feet. Made birdie. The firm Pebble green did exactly what you asked it to do.` },
+              { outcome: 'par',    score:  0, weight: 30, caddieText: `Punch landed firm and released to 18 feet. Hit a solid two-putt. Par. The bump-and-run worked — just ended up farther than ideal.` },
+              { outcome: 'bogey', score:  1, weight: 62, caddieText: `Punch released harder than expected on the firm green — ran 8 feet past the flag. Missed the par putt coming back. Bogey. Firm greens in a headwind are hard to judge with a running shot.` }
             ]
           }
         ]
@@ -531,19 +531,19 @@ const COURSES = [
             ]
           },
           {
-            label: '3-wood to the wide part of the fairway',
-            detail: '3-wood to the wide left section, leaving 160 yards for a 7-iron approach.',
+            label: 'Driver with a draw — use the wind to cut the angle',
+            detail: 'Start the driver at the right tree line and let the R-to-L wind curve it around the corner. Leaves ~100 yards if it holds.',
             outcomes: [
-              { outcome: 'birdie', score: -1, weight: 12, caddieText: `3-wood to the wide fairway, 7-iron to 10 feet. Made the birdie putt. Laying back to 160 yards isn't exciting but it produced birdie today.` },
-              { outcome: 'par',    score:  0, weight: 52, caddieText: `3-wood to the wide left, 7-iron to 20 feet. Two putts. Par. Nothing wrong. Nothing exciting. That's what the wide part of the fairway is for.` },
-              { outcome: 'bogey', score:  1, weight: 36, caddieText: `3-wood to the wide fairway, 7-iron a touch fat — 28 feet short of the flag. Three-putted because the first one ran 6 feet past. Bogey. Driver up the left would have left pitching wedge instead of 7-iron.` }
+              { outcome: 'par',    score:  0, weight: 18, caddieText: `Drew it perfectly around the corner — 100 yards left, great angle to the pin. Sand wedge to 12 feet. Two putts. Par. The draw worked. Would've been birdie with a better wedge.` },
+              { outcome: 'bogey', score:  1, weight: 42, caddieText: `Too much draw — wind grabbed it and it ran through the fairway into the left rough. Restricted stance, wedge came out sideways. Bogey. The wind made that draw stronger than you expected.` },
+              { outcome: 'double', score: 2, weight: 40, caddieText: `Draw didn't start far enough right — clipped the tree line and deflected deep into the right rough. Couldn't get to the green from there. Chip, two putts. Double bogey. Drawing it at trees requires commitment to the start line.` }
             ]
           }
         ]
       },
       {
         number: 17, par: 3, yardage: 208,
-        situation: `The 17th at Pebble Beach. 208 yards, the ocean hugging the entire left side, the green angled toward the water. Today: 18mph wind directly into your face. The flag is center-left. Jack Nicklaus hit a 1-iron here in 1972.`,
+        situation: `The 17th at Pebble Beach. 208 yards, the ocean hugging the entire left side, the green angled toward the water. Today: 18mph wind directly into your face. The flag is center-left.`,
         choices: [
           {
             label: '3-wood aimed center-right of the green',
@@ -565,7 +565,7 @@ const COURSES = [
           },
           {
             label: '3-iron directly at the left-center flag',
-            detail: `Take 3-iron and attack the flag. The ocean is left, but you're going for birdie.`,
+            detail: `3-iron at the flag. 208 yards, 18mph headwind, ocean hard left.`,
             outcomes: [
               { outcome: 'par',    score:  0, weight:  5, caddieText: `Aimed at the flag, got extremely lucky — wind pushed it right at the last second and it found the green. 28 feet. Two putts. Par. The ocean was 4 feet away from your ball. Don't do that again.` },
               { outcome: 'bogey', score:  1, weight: 30, caddieText: `3-iron at the left-center flag, went left of where you aimed — barely stayed on the green left edge. Chip, 14 feet. Missed. Bogey. The flag was on the ocean side. You aimed at the ocean side.` },
@@ -576,7 +576,7 @@ const COURSES = [
       },
       {
         number: 18, par: 5, yardage: 543,
-        situation: `The most famous finishing hole in golf. 543 yards hugging Stillwater Cove, the Pacific Ocean the entire left side from tee to green. Your drive of 278 yards left you on the right side of the fairway — 265 yards to the flag. Wind is 8mph off the ocean, left to right. The green is guarded on the left by the sea wall.`,
+        situation: `Hole 18 at Pebble Beach. 543 yards hugging Stillwater Cove, the Pacific Ocean the entire left side from tee to green. Your drive of 278 yards left you on the right side of the fairway — 265 yards to the flag. Wind is 8mph off the ocean, left to right. The green is guarded on the left by the sea wall.`,
         choices: [
           {
             label: 'Lay up right, money wedge from 70 yards',
@@ -590,7 +590,7 @@ const COURSES = [
           },
           {
             label: '3-wood at the green from 265 yards',
-            detail: 'Go for the green in two. The ocean is left, but flush a 3-wood right and you could make eagle.',
+            detail: 'Go for the green in two. 265 yards, 3-wood. Stillwater Cove is the entire left side.',
             outcomes: [
               { outcome: 'par',    score:  0, weight:  5, caddieText: `3-wood drifted right, not left — caught the right side of the green. 35 feet. Two putts. Par. The cove let you live. Don't try that again.` },
               { outcome: 'bogey', score:  1, weight: 25, caddieText: `3-wood leaked slightly left, found the rough between the seawall and the green. Hit it to 18 feet. Missed the par putt. Bogey. Pebble 18 punishes the attempt even when it doesn't take your ball.` },

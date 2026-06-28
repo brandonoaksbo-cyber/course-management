@@ -4,6 +4,7 @@ const state = {
   currentHoleIndex: 0,
   scores: [],
   selectedChoice: null,
+  shuffledChoices: [],
 };
 
 // Score labels
@@ -148,11 +149,14 @@ function showHole() {
   document.getElementById('hole-yardage').textContent = `${hole.yardage} yards`;
   document.getElementById('hole-situation').textContent = hole.situation;
 
+  // Shuffle choices for this play-through
+  state.shuffledChoices = [...hole.choices].sort(() => Math.random() - 0.5);
+
   // Render choices
   const choicesEl = document.getElementById('choices-container');
   choicesEl.innerHTML = '';
 
-  hole.choices.forEach((choice, idx) => {
+  state.shuffledChoices.forEach((choice, idx) => {
     const risk = getRisk(choice.outcomes);
     const btn = document.createElement('div');
     btn.className = 'choice-card';
@@ -210,7 +214,7 @@ function confirmChoice() {
   if (state.selectedChoice === null) return;
 
   const hole = state.currentCourse.holes[state.currentHoleIndex];
-  const choice = hole.choices[state.selectedChoice];
+  const choice = state.shuffledChoices[state.selectedChoice];
   const result = pickWeightedOutcome(choice.outcomes);
 
   // Lock choices

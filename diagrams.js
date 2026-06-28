@@ -30,8 +30,8 @@ const HOLE_DIAGRAMS = {
   <!-- Hole label -->
   <text x="14" y="168" fill="#c9a84c" font-size="8" font-family="Georgia" font-weight="bold">HOLE 1</text>
   <text x="14" y="177" fill="#8aab8e" font-size="6" font-family="Georgia">Par 4 · 377 yds</text>
-  <!-- Wind arrow -->
-  <text x="260" y="30" fill="#7ab8f5" font-size="6" font-family="Georgia">→ WIND</text>
+  <!-- Wind arrow: L-to-R crosswind -->
+  <text x="150" y="25" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">↑ L-TO-R WIND 10mph</text>
 </svg>`,
 
   2: `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="background:#152a18">
@@ -104,22 +104,20 @@ const HOLE_DIAGRAMS = {
   <ellipse cx="242" cy="90" rx="22" ry="13" fill="#4a8f5a"/>
   <circle cx="242" cy="88" r="2" fill="white"/>
   <text x="242" y="105" fill="white" font-size="5" text-anchor="middle" font-family="Georgia">GREEN</text>
-  <!-- OB stakes — right side red dashed -->
+  <!-- OB stakes — left side (top of diagram) red dashed -->
   <line x1="30" y1="78" x2="270" y2="78" stroke="#c94444" stroke-width="1.2" stroke-dasharray="5,3"/>
-  <text x="140" y="73" fill="#c94444" font-size="5" text-anchor="middle" font-family="Georgia">OUT OF BOUNDS (RIGHT)</text>
-  <!-- Drop-off left -->
+  <text x="270" y="76" fill="#c94444" font-size="5" text-anchor="end" font-family="Georgia">← OB LEFT SIDE</text>
+  <!-- Drop-off right of green (bottom of diagram = right side) -->
   <path d="M222,100 Q230,106 250,108 L250,120 Q228,118 220,110 Z" fill="#0f2e14"/>
-  <text x="238" y="118" fill="#5ab877" font-size="4.5" text-anchor="middle" font-family="Georgia">DROP-OFF</text>
-  <!-- Trees left -->
-  <ellipse cx="90" cy="118" rx="36" ry="12" fill="#0d1f10"/>
-  <text x="90" y="135" fill="#5ab877" font-size="5" text-anchor="middle" font-family="Georgia">TREES (LEFT ROUGH)</text>
+  <text x="238" y="125" fill="#5ab877" font-size="4.5" text-anchor="middle" font-family="Georgia">DROP-OFF RIGHT</text>
   <!-- Layup zone 70y -->
   <line x1="176" y1="82" x2="176" y2="100" stroke="#5ab877" stroke-width="0.8" stroke-dasharray="3,2"/>
   <text x="155" y="112" fill="#5ab877" font-size="4.5" font-family="Georgia">LAYUP → 70y</text>
+  <!-- Wind arrow: L-to-R crosswind -->
+  <text x="150" y="25" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">↑ L-TO-R WIND</text>
   <!-- Hole label -->
   <text x="14" y="158" fill="#c9a84c" font-size="8" font-family="Georgia" font-weight="bold">HOLE 4</text>
-  <text x="14" y="167" fill="#8aab8e" font-size="6" font-family="Georgia">Par 4 · 331 yds · OB Right</text>
-  <text x="14" y="176" fill="#c94444" font-size="5.5" font-family="Georgia" font-style="italic">Driveable — but OB is tight</text>
+  <text x="14" y="167" fill="#8aab8e" font-size="6" font-family="Georgia">Par 4 · 331 yds · OB Left</text>
 </svg>`,
 
   5: `<svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg" style="background:#152a18">
@@ -298,7 +296,6 @@ const HOLE_DIAGRAMS = {
   <text x="228" y="125" fill="#c94444" font-size="4.5" text-anchor="middle" font-family="Georgia">FALLOFF</text>
   <!-- Headwind -->
   <text x="150" y="28" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">← HEADWIND 12mph</text>
-  <text x="150" y="40" fill="#8aab8e" font-size="5" text-anchor="middle" font-family="Georgia">Plays ~190 yds (171 book)</text>
   <!-- 150y marker -->
   <line x1="170" y1="82" x2="170" y2="108" stroke="#c9a84c" stroke-width="0.8" stroke-dasharray="3,2"/>
   <text x="158" y="102" fill="#c9a84c" font-size="5" font-family="Georgia">150y</text>
@@ -428,8 +425,8 @@ const HOLE_DIAGRAMS = {
   <ellipse cx="80" cy="68" rx="40" ry="12" fill="#0d1f10"/>
   <text x="80" y="57" fill="#5ab877" font-size="5" text-anchor="middle" font-family="Georgia">TREES</text>
   <ellipse cx="140" cy="68" rx="30" ry="10" fill="#0d1f10"/>
-  <!-- Crosswind -->
-  <text x="150" y="28" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">⇄ CROSSWIND 10mph</text>
+  <!-- Wind arrow: L-to-R crosswind -->
+  <text x="150" y="28" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">↑ L-TO-R CROSSWIND 10mph</text>
   <text x="150" y="40" fill="#8aab8e" font-size="5" text-anchor="middle" font-family="Georgia">573 yds — 3-shot par 5</text>
   <!-- Hole label -->
   <text x="4" y="165" fill="#c9a84c" font-size="8" font-family="Georgia" font-weight="bold">HOLE 14</text>
@@ -489,8 +486,8 @@ const HOLE_DIAGRAMS = {
   <!-- Proper tee line — left center -->
   <line x1="32" y1="93" x2="120" y2="93" stroke="#5ab877" stroke-width="1" stroke-dasharray="3,2"/>
   <text x="70" y="112" fill="#5ab877" font-size="5" text-anchor="middle" font-family="Georgia">PLAY LEFT-CENTER</text>
-  <!-- Right-left wind -->
-  <text x="150" y="28" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">← R-TO-L WIND</text>
+  <!-- Wind arrow: R-to-L crosswind -->
+  <text x="150" y="28" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">↓ R-TO-L WIND</text>
   <!-- 150y marker from green -->
   <line x1="210" y1="74" x2="210" y2="100" stroke="#c9a84c" stroke-width="0.8" stroke-dasharray="3,2"/>
   <text x="199" y="98" fill="#c9a84c" font-size="5" font-family="Georgia">150y</text>
@@ -522,9 +519,8 @@ const HOLE_DIAGRAMS = {
   <!-- Safe right -->
   <ellipse cx="168" cy="86" rx="10" ry="8" fill="none" stroke="#5ab877" stroke-width="0.8" stroke-dasharray="3,2"/>
   <text x="182" y="82" fill="#5ab877" font-size="4.5" font-family="Georgia">SAFE RIGHT</text>
-  <!-- Headwind arrow -->
-  <text x="200" y="30" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">← HEADWIND 18mph</text>
-  <text x="200" y="40" fill="#8aab8e" font-size="5" text-anchor="middle" font-family="Georgia">Plays 240+ yds</text>
+  <!-- Headwind arrow: tee is RIGHT, green is LEFT, so headwind = → -->
+  <text x="200" y="30" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">→ HEADWIND 18mph</text>
   <!-- Yardage line -->
   <line x1="244" y1="28" x2="188" y2="85" stroke="#c9a84c" stroke-width="0.8" stroke-dasharray="3,2"/>
   <text x="230" y="55" fill="#c9a84c" font-size="5" font-family="Georgia">208 yds</text>
@@ -558,8 +554,8 @@ const HOLE_DIAGRAMS = {
   <!-- Danger zone -->
   <path d="M62,88 Q80,85 100,84" stroke="#c94444" stroke-width="2" fill="none"/>
   <text x="80" y="78" fill="#c94444" font-size="4.5" text-anchor="middle" font-family="Georgia">DANGER — COVE LEFT</text>
-  <!-- Wind -->
-  <text x="170" y="25" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">→ OFFSHORE WIND 8mph</text>
+  <!-- Wind arrow: L-to-R crosswind off ocean -->
+  <text x="170" y="25" fill="#7ab8f5" font-size="6" text-anchor="middle" font-family="Georgia">↑ L-TO-R WIND 8mph</text>
   <!-- Hole label -->
   <text x="64" y="165" fill="#c9a84c" font-size="8" font-family="Georgia" font-weight="bold">HOLE 18</text>
   <text x="64" y="174" fill="#8aab8e" font-size="6" font-family="Georgia">Par 5 · 543 yds · Cove Left</text>
