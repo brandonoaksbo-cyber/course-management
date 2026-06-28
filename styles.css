@@ -255,6 +255,23 @@ html, body {
   z-index: 10;
 }
 .hole-topbar-left { display: flex; flex-direction: column; }
+
+.back-to-menu-btn {
+  background: none;
+  border: none;
+  color: var(--gold);
+  font-family: var(--body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0;
+  margin-bottom: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.1s;
+}
+.back-to-menu-btn:active { opacity: 1; }
 .hole-course-label {
   font-size: 9px;
   letter-spacing: 2.5px;
@@ -338,6 +355,7 @@ html, body {
 .sc-cell.sc-current { border-color: var(--gold); }
 .sc-num { font-size: 9px; color: var(--muted); font-weight: 600; letter-spacing: 0.3px; }
 .sc-dot { font-size: 11px; margin-top: 2px; }
+.sc-eagle .sc-dot  { color: #7ab8f5; }
 .sc-birdie .sc-dot { color: var(--green); }
 .sc-par .sc-dot { color: var(--text-dim); }
 .sc-bogey .sc-dot { color: var(--tan); }
@@ -471,6 +489,7 @@ html, body {
   border: 1px solid;
   letter-spacing: 0.2px;
 }
+.badge-eagle  { background: #0a1a2a; color: #7ab8f5; border-color: #7ab8f5; }
 .badge-birdie { background: var(--green-dim); color: var(--green); border-color: var(--green); }
 .badge-par    { background: var(--surface3);  color: var(--text-dim); border-color: var(--border); }
 .badge-bogey  { background: var(--tan-dim);   color: var(--tan);   border-color: var(--tan); }
@@ -585,6 +604,7 @@ html, body {
   padding: 14px 6px;
   text-align: center;
 }
+.eagle-stat  { background: #0a1a2a; }
 .birdie-stat { background: var(--green-dim); }
 .bogey-stat  { background: var(--tan-dim); }
 .double-stat { background: var(--red-dim); }
@@ -595,6 +615,7 @@ html, body {
   color: var(--text);
   line-height: 1;
 }
+.eagle-stat  .stat-num { color: #7ab8f5; }
 .birdie-stat .stat-num { color: var(--green); }
 .bogey-stat  .stat-num { color: var(--tan); }
 .double-stat .stat-num { color: var(--red); }
@@ -641,6 +662,7 @@ html, body {
   color: var(--text);
 }
 .scorecard-table tr:last-child td { border-bottom: none; }
+.row-eagle  td { background: #0a1a2a; color: #7ab8f5; }
 .row-birdie td { background: var(--green-dim); color: var(--green); }
 .row-bogey  td { background: var(--tan-dim); color: var(--tan); }
 .row-double td { background: var(--red-dim); color: var(--red); }

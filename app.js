@@ -189,6 +189,7 @@ function confirmChoice() {
   const caddieEl = document.getElementById('caddie-text');
 
   const outcomeMap = {
+    eagle:  { label: 'Eagle',  class: 'badge-eagle',  char: '−2' },
     birdie: { label: 'Birdie', class: 'badge-birdie', char: '−1' },
     par:    { label: 'Par',    class: 'badge-par',    char: 'E' },
     bogey:  { label: 'Bogey', class: 'badge-bogey',  char: '+1' },
@@ -248,7 +249,8 @@ function updateScorecardStrip() {
     let scoreStr = '·';
     if (hasScore) {
       const diff = score - (hole.par - hole.par); // score relative to par contribution
-      if (score === -1) { scoreClass = 'sc-birdie'; scoreStr = '−'; }
+      if (score === -2) { scoreClass = 'sc-eagle'; scoreStr = '◆'; }
+      else if (score === -1) { scoreClass = 'sc-birdie'; scoreStr = '−'; }
       else if (score === 0) { scoreClass = 'sc-par'; scoreStr = '●'; }
       else if (score === 1) { scoreClass = 'sc-bogey'; scoreStr = '+'; }
       else { scoreClass = 'sc-double'; scoreStr = '✕'; }
@@ -273,6 +275,7 @@ function showFinalScorecard() {
   saveBestScore(course.id, total);
 
   // Stats
+  const eagles  = state.scores.filter(s => s <= -2).length;
   const birdies = state.scores.filter(s => s === -1).length;
   const pars    = state.scores.filter(s => s === 0).length;
   const bogeys  = state.scores.filter(s => s === 1).length;
@@ -286,6 +289,7 @@ function showFinalScorecard() {
   // Stats grid
   const statsEl = document.getElementById('final-stats');
   statsEl.innerHTML = `
+    ${eagles ? `<div class="stat-box eagle-stat"><div class="stat-num">${eagles}</div><div class="stat-lbl">Eagles</div></div>` : ''}
     <div class="stat-box birdie-stat"><div class="stat-num">${birdies}</div><div class="stat-lbl">Birdies</div></div>
     <div class="stat-box par-stat"><div class="stat-num">${pars}</div><div class="stat-lbl">Pars</div></div>
     <div class="stat-box bogey-stat"><div class="stat-num">${bogeys}</div><div class="stat-lbl">Bogeys</div></div>
@@ -298,12 +302,13 @@ function showFinalScorecard() {
   course.holes.forEach((hole, idx) => {
     const score = state.scores[idx];
     let cls = '';
-    if (score === -1) cls = 'row-birdie';
+    if (score <= -2) cls = 'row-eagle';
+    else if (score === -1) cls = 'row-birdie';
     else if (score === 0) cls = 'row-par';
     else if (score === 1) cls = 'row-bogey';
     else cls = 'row-double';
 
-    const outcomeLabels = { '-1': 'Birdie', '0': 'Par', '1': 'Bogey', '2': 'Double' };
+    const outcomeLabels = { '-2': 'Eagle', '-1': 'Birdie', '0': 'Par', '1': 'Bogey', '2': 'Double' };
     const scoreLabel = outcomeLabels[score] || '+' + score;
     const diff = score < 0 ? score.toString() : score > 0 ? '+' + score : 'E';
 
@@ -345,6 +350,13 @@ document.addEventListener('DOMContentLoaded', () => {
     startCourse(state.currentCourse);
   });
   document.getElementById('home-btn').addEventListener('click', () => {
+    renderCourseSelect();
+    showScreen('course-select');
+  });
+  document.getElementById('back-to-menu-btn').addEventListener('click', () => {
+    if (state.scores.length > 0) {
+      if (!confirm('Quit this round and return to the menu? Your progress will be lost.')) return;
+    }
     renderCourseSelect();
     showScreen('course-select');
   });

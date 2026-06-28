@@ -21,21 +21,21 @@ const COURSES = [
             detail: 'Let the wind work for you — start it left and let the breeze bring it back to center. A 280-yard drive drops you at ~97 yards.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `That's how you play Pebble. You used the wind as your partner. Starting the ball at the left bunkers and letting the left-to-right breeze carry it back split the fairway perfectly — 97 yards left, your money wedge. Stuck it to 6 feet and made the birdie putt. Trust the wind, never fight it.`
+            caddieText: `Driver down the left, wind brought it back center — 97 yards left. You hit your wedge to 6 feet and actually drained it. First hole birdie at Pebble Beach. Try not to think about it too hard for the next 17 holes.`
           },
           {
             label: '3-wood to the center of the fairway',
             detail: 'Play conservatively — 230 yards to the heart of the fairway, leaving 147 yards for a 9-iron approach.',
             outcome: 'par',
             score: 0,
-            caddieText: `Safe play, and it worked — 9-iron to 18 feet, two putts for par. Nothing wrong with that. But this hole is designed to give up birdies with a well-placed tee shot. You left a shot on the course. The opener at Pebble is a gift if you use the wind.`
+            caddieText: `Solid 3-wood, 9-iron to 15 feet. You misread the break by about two cups — it went hard left, you played it straight. Tapped in for par. Good process. Bad putt. Classic golf.`
           },
           {
             label: 'Driver, cut the dogleg right',
             detail: 'Try to cut the corner and shorten the approach. Thread it past the trees on the right.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `The trees on the right at 250 are tighter than they look from the tee, and the left-to-right wind pushed you even further into them. Rough lie, restricted swing, punched out sideways, scrambled for bogey. Cutting doglegs works when wind is your ally — here it was working against you. The correct shape on this hole is using the wind, not fighting it.`
+            caddieText: `The trees grabbed it, as they always do. Punched out sideways, hit a gap wedge to 22 feet, and three-putted because of course you did. Welcome to Pebble Beach. Bogey to open.`
           }
         ]
       },
@@ -48,23 +48,23 @@ const COURSES = [
           {
             label: 'Lay back to 70 yards with a 9-iron',
             detail: 'Hit 9-iron for 150 yards, leaving 72 yards — your money wedge distance. Set up the shot you own.',
-            outcome: 'birdie',
-            score: -1,
-            caddieText: `Classic course management. You turned a 222-yard problem into a 70-yard certainty. That wedge from 72 yards is the highest-percentage birdie shot in your bag — you hit it to 4 feet and made the putt. Great players don't try to be heroes on par 5s. They create the birdie look they want, not the one the hole forces on them.`
+            outcome: 'eagle',
+            score: -2,
+            caddieText: `9-iron to 72 yards — perfectly calibrated. You hit the wedge and it just... never landed. Pitched once, rolled straight at the flag, and dropped. Eagle. A HOLE OUT FROM THE FAIRWAY. At Pebble Beach. You're going to be telling this story for the rest of your life. Buy the commemorative ball marker.`
           },
           {
             label: '5-wood at the green',
             detail: 'Go for it in two. The headwind makes your 5-wood play like a 3-wood — you need 222 yards of carry to clear the bunker.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `Into a 12mph headwind, your 5-wood was fighting uphill the whole way. Came up short, caught the front bunker. Blast out to 20 feet, two putts — bogey. The math never worked: 222 yards into a headwind is a tough 3-wood for a tour player. Know when the green isn't gettable, and take what the hole gives you.`
+            caddieText: `Into a 12mph headwind, your 5-wood had absolutely no chance. It came up short, rolled into the front bunker. Blasted to 22 feet. Three-putted because the green was running away from you and your first putt was 6 feet short. Bogey. The math was never there.`
           },
           {
             label: '4-iron punch-and-run',
             detail: 'Hit a low punch to keep it under the wind. 200 yards — it might feed onto the front of the green.',
             outcome: 'par',
             score: 0,
-            caddieText: `The punch worked — ball rolled up to the front edge, 35 feet from the hole. Two putts for par. Solid execution, but a risky shot when the safest play — 9-iron to your wedge yardage — would have given you a better birdie look. Par is fine. Birdie was right there.`
+            caddieText: `The punch actually worked — ball rolled up to the front edge, 35 feet away. Hit a decent lag, tapped in for par. Not a disaster. But the 9-iron to 70 yards would have given you a real birdie look. And apparently an eagle look, but let's not dwell on that.`
           }
         ]
       },
@@ -77,23 +77,23 @@ const COURSES = [
           {
             label: '3-wood for precision',
             detail: 'Take 3-wood — lands at 228 yards, leaving 160 yards. A controlled 7-iron approach to a green you can attack.',
-            outcome: 'birdie',
-            score: -1,
-            caddieText: `The right call. At 22 yards wide, this fairway punishes driver. Your 3-wood landed center of the short grass, leaving 160 yards — a pure 7-iron. Stuffed it to 7 feet and made the birdie. The principle: when the fairway is narrow, take the club you hit straight every time, not the club that goes furthest.`
+            outcome: 'par',
+            score: 0,
+            caddieText: `3-wood found the short grass — 158 yards left. Hit a smooth 7-iron to 18 feet. Read it as a gentle right-to-left, but it barely moved. Two putts for par. Right play, wrong read. You'll take it.`
           },
           {
             label: 'Driver aimed at the right side',
             detail: 'Trust your driver and aim for the right half of the fairway, trying to thread the gap.',
-            outcome: 'bogey',
-            score: 1,
-            caddieText: `You faded it slightly more than intended and found the right rough. The trees blocked a clean line to the pin, so you punched out sideways, hit a wedge to 20 feet, and missed the par putt. Narrow fairways demand precision clubs. Your driver is your most powerful club — but also your most erratic. A 22-yard fairway is no place for it.`
+            outcome: 'double',
+            score: 2,
+            caddieText: `Driver found the right rough, exactly as feared. The ball was buried in a tuft of grass. You took a big swing at it, it squirted 40 yards sideways into the trees. Punched out, short-sided yourself, chunked the chip. Three-putted from the fringe. Double bogey. The narrow fairway was trying to warn you the whole time.`
           },
           {
             label: 'Driver straight down the middle',
             detail: 'Grip and rip — 280 yards leaves just 108 yards, a soft wedge. Maximum birdie potential.',
-            outcome: 'par',
-            score: 0,
-            caddieText: `You got away with it — driver found the fairway, left a 108-yard wedge. Hit it to 18 feet and missed the birdie. Lucky. The trees at 255 yards make this a real miss rate with driver when you're swinging hard. The 3-wood gives you the same approach range with dramatically better fairway percentage. "It worked" doesn't mean the process was right.`
+            outcome: 'bogey',
+            score: 1,
+            caddieText: `You flushed it — 108 yards left. Then hit a hot sand wedge that ballooned over the back of the green. Chip to 12 feet, lipped it out on the par save. Bogey. You got away with the driver. The short game didn't return the favor.`
           }
         ]
       },
@@ -108,21 +108,21 @@ const COURSES = [
             detail: `Try to drive the green with a big draw. 331 yards, wind is left-to-right — you'd need to fight it the whole way.`,
             outcome: 'double',
             score: 2,
-            caddieText: `Drawing driver on a 331-yard hole into a left-to-right wind, with OB right, is the highest-risk play in golf. You overcorrected the draw, it ran through the green and into a deep swale left. Tough up-and-down, couldn't convert — double bogey. This hole is a trap for gamblers. The right play was never driver.`
+            caddieText: `Drawing driver on a 331-yard hole into a left-to-right wind with OB right. It overdrew, ran through the green and into a deep swale left. Drop. Chip. Two putts. Double bogey. The OB is right there and you aimed toward it. Golf gives you exactly what you deserve.`
           },
           {
             label: 'Hybrid to 70 yards',
             detail: 'Take a controlled hybrid — lands at 261 yards, leaving 70 yards. Your money wedge from a safe position.',
-            outcome: 'birdie',
-            score: -1,
-            caddieText: `Perfect. You treated this like a par 3.5. Hybrid to 70 yards, money wedge to 5 feet, birdie putt drops. On short par 4s with OB, the goal is to eliminate the big number and create your best birdie opportunity. Your 70-yard wedge is a weapon — this is exactly when to use it.`
+            outcome: 'par',
+            score: 0,
+            caddieText: `Hybrid to 70 yards — perfect positioning. Hit your money wedge to 4 feet. And then... you missed it. Left lip, burned the edge, never had a chance. Tap-in par. Should've been birdie. This is golf and golf is occasionally cruel.`
           },
           {
             label: '3-wood to 120 yards',
             detail: 'Conservative 3-wood to 120 yards. Safe, leaves a pitching wedge distance approach.',
-            outcome: 'par',
-            score: 0,
-            caddieText: `Solid par — pitching wedge to 15 feet, two putts. But 120 yards isn't your best yardage, 70 yards is. Taking one more club off the tee (hybrid) and landing at 70 yards would have set up a much higher birdie percentage. Par is fine; birdie was a better option than you gave yourself.`
+            outcome: 'bogey',
+            score: 1,
+            caddieText: `3-wood to 120 yards — safe play. Hit a solid pitching wedge to 18 feet. Three-putted because the green is faster than it looks and your first putt ran 4 feet past the hole. Bogey. Should've been smarter about the layup yardage. 70 yards is your number, not 120.`
           }
         ]
       },
@@ -135,23 +135,23 @@ const COURSES = [
           {
             label: '6-iron to the center of the green',
             detail: 'Club up two clubs for the wind. A 6-iron into this headwind plays to about 168 yards. Aim center, no heroics.',
-            outcome: 'birdie',
-            score: -1,
-            caddieText: `Exactly right. The 15mph headwind added 20 yards of effective distance, making this play like a 186-yard hole. Your 6-iron was the correct answer — hit it pure to center-green, 12 feet below the hole. Made the birdie. The golden rule into headwinds: take more club than you think, aim for the center, and don't let ego get in the way.`
+            outcome: 'par',
+            score: 0,
+            caddieText: `6-iron was exactly right — hit it pure to center-green, 18 feet below the hole. The par putt was a 5-footer right-to-left and you turned it into a 2-footer by rolling the first one 4 feet past. Made the comebacker. Par. Not the birdie you wanted, but the 7-iron in the bunker is worse.`
           },
           {
             label: '7-iron straight at the flag',
             detail: 'Your 7-iron goes 170 yards. The flag is 166. Feels like plenty of club.',
-            outcome: 'bogey',
-            score: 1,
-            caddieText: `The headwind destroyed your 7-iron. It came up 18 yards short and plugged in the front bunker. Blast out to 20 feet, missed the par putt — bogey. Into a 15mph headwind, a 170-yard club plays to about 148 yards. Into headwinds, add a club for every 5mph of wind over 10. Today called for at least two clubs up.`
+            outcome: 'double',
+            score: 2,
+            caddieText: `The 7-iron came up 18 yards short and plugged in the front bunker. Blasted it to 25 feet — the green was sliding away and you had no control of the speed. Three-putted. Double bogey. Into a 15mph headwind, that club was never making it. Not even close.`
           },
           {
             label: '9-iron punch shot, keep it under the wind',
             detail: 'Hit a low punch with 9-iron to keep it under the wind and let it release onto the front of the green.',
-            outcome: 'par',
-            score: 0,
-            caddieText: `Clever thinking, decent execution. The punch 9-iron stayed low and released onto the front of the green — 40 feet away. Two solid putts for par. Creative, but on a green that slopes aggressively away from you, starting from 40 feet makes par likely and birdie unlikely. The 6-iron to center-green was the higher-percentage play.`
+            outcome: 'bogey',
+            score: 1,
+            caddieText: `The punch stayed low and rolled up to the front of the green — 40 feet away. Hit a decent lag but left it 5 feet short, and the par putt broke more than expected. Bogey. Creative shot, but the 6-iron to center-green gets you closer every time.`
           }
         ]
       },
@@ -166,21 +166,21 @@ const COURSES = [
             detail: '9-iron for 150 yards, leaving 88 yards — within wedge range. Set up the scoring shot you own.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `The math on going for this green never worked. Uphill into a headwind, your 5-wood was never reaching 238 yards. You made the smart call: 9-iron to 150, wedge from 88 yards to 6 feet, birdie putt. Knowing when you can't reach a green in two is as important as knowing when you can. This was a three-shot par 5 today.`
+            caddieText: `Laid up to 88 yards — smart decision. Hit your wedge to 6 feet on a green that was running faster than you expected. And you made the putt. On an uphill par 5 into the wind, this is the birdie the hole is willing to give you. You took it.`
           },
           {
             label: '5-wood at the green',
             detail: 'Try to reach in two. Uphill into headwind, your 5-wood plays to about 195 yards — well short of the green.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `The math was never there. Uphill plus 12mph headwind turned your 5-wood into a 195-yard club. Came up 43 yards short, rolled into the left bunker. Blast out, two putts — bogey. On par 5s, "going for it" only makes sense when you can genuinely reach the green. Today you couldn't. Recognize those situations before you pull the club.`
+            caddieText: `The 5-wood never had a chance — uphill, headwind, 238 yards. It came up 40 yards short and rolled into the left bunker. Blasted out past the hole, two putts. Bogey. You played the wrong shot on the wrong hole on the wrong day into the wrong wind.`
           },
           {
             label: '7-iron to exactly 68 yards',
             detail: 'Hit 7-iron for 170 yards, leaving exactly 68 yards — your wedge zone. Clean and precise.',
             outcome: 'par',
             score: 0,
-            caddieText: `Good thinking — same concept as the 9-iron layup, just with a 7-iron to a slightly tighter number. You hit 7-iron to 170, leaving 68 yards. But the wedge was pushed slightly and left 20 feet for birdie, which you couldn't convert. Par. The process was right. The birdie from 68 yards was still the best play on this hole — you just didn't make it.`
+            caddieText: `7-iron to 170 left 68 yards — your number. Hit a solid wedge to 15 feet. Hit a decent putt that caught the right lip and spun out like it was allergic to the hole. Par. The process was right. The lip is just the lip. Golf.`
           }
         ]
       },
@@ -195,21 +195,21 @@ const COURSES = [
             detail: 'Club down, swing at 70%. Start it left of center and let the quartering breeze bring it right. Keep the ball low.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `That's how the locals play this hole. You understood the key: on Pebble's 7th, the wind is your caddie. A full swing into 20mph would balloon and sail right. The half-punch 9-iron started left of center, held its line, and the breeze brought it back to 8 feet. Made the putt. Club down, swing down, trust the wind to finish the job.`
+            caddieText: `Half-punch 9-iron, started left, wind brought it back — 8 feet. You stood over it for about 45 seconds. Went through your routine twice. And then you drained it. Birdie on the 7th at Pebble Beach. Most people make a five here without even trying.`
           },
           {
             label: 'Pitching wedge, full swing at the flag',
             detail: 'Full pitching wedge (125 yards) straight at the pin. The wind should bring it back into the green.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `Full swings into crosswinds balloon badly. Your pitching wedge got up in the 20mph wind and pushed hard right — off the green, onto the cliff-side collection area. Nervy chip to 12 feet, missed the par putt — bogey. At Pebble's 7th, the instinct to swing harder is exactly wrong. The hole is 106 yards and plays like 106 yards. Control ball flight, not distance.`
+            caddieText: `Full swing into a 20mph crosswind. The pitching wedge ballooned and went hard right — off the green, onto the cliff-side collection area. Nervy chip to 12 feet. You were so relieved it wasn't in the ocean that you hit the par putt too hard. Bogey. Never swing full into a crosswind on this hole. Never.`
           },
           {
             label: '9-iron straight at the pin, full swing',
             detail: 'Full 9-iron (150 yards) aimed directly at the flag. Plenty of club — give yourself a landing buffer.',
             outcome: 'double',
             score: 2,
-            caddieText: `A full 9-iron from 106 yards into a 20mph crosswind at a green with no margin — that's a recipe for disaster, and it delivered. The ball ballooned, drifted hard right, and went over the cliff. Drop zone, two more to get down — double bogey. Pebble's 7th demands one thing: humility. Club down, shorter swing, keep the ball under the wind. Pride has destroyed scores here for 100 years.`
+            caddieText: `Full 9-iron from 106 yards into a 20mph crosswind. The ball ballooned, drifted hard right, and disappeared over the cliff into the Pacific Ocean. That's a penalty drop. Then you chunked the chip from the drop zone. Double bogey. Pebble's 7th doesn't care how far you hit it. It only cares whether you controlled it.`
           }
         ]
       },
@@ -224,21 +224,21 @@ const COURSES = [
             detail: 'Miss left, miss safe. Aim for the middle-left of the green — takes the bunker and ocean out of play entirely.',
             outcome: 'par',
             score: 0,
-            caddieText: `The right instinct, good execution — but the putt from 30 feet left of a right-side pin on a fast green was trickier than expected. Two putts for par. You eliminated the big number and gave yourself a realistic putt. The one thing you could have done more aggressively: the bunker right is recoverable. The ocean isn't. Left-center was the right neighborhood.`
+            caddieText: `9-iron to the left half — smart. Hit it to 28 feet left of the flag. Two solid putts for par. You avoided the ocean, avoided the bunker, and walked away with exactly what this hole was offering. Not flashy. Correct.`
           },
           {
             label: '9-iron straight at the flag',
             detail: `Attack the right-side pin directly. 143 yards, 9-iron distance — flush it and you're looking at a tap-in birdie.`,
             outcome: 'bogey',
             score: 1,
-            caddieText: `Going straight at a right-side pin here means any miss right — even a slight one — is over the bunker and potentially off the cliff. You caught the bunker. Tough explosion, couldn't save par — bogey. When the pin is tight to a hazard with no recovery (the Pacific Ocean), the miss away from danger is never wrong. Attack the flag only when the miss is survivable.`
+            caddieText: `Straight at the right-side pin — it caught the bunker by two feet. Tough explosion, you bladed it slightly and rolled to 15 feet. Missed the par save. Bogey. The ocean is 100 feet below and to the right. Any miss right on this hole has consequences. The miss has to go left. Always left.`
           },
           {
             label: '7-iron into the center of the green',
             detail: 'Take extra club, keep it below the hole, land it center-green and let the slope release it toward the flag.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `Smart play with a great reward. The 7-iron landed center-green and released toward the flag — 12 feet. Made the putt. You used the green's slope as a weapon. Sometimes the conservative play IS the most attacking play in disguise: knowing a green's slope and using extra club to land-and-release can be more accurate than trying to fly it directly at a tight flag.`
+            caddieText: `7-iron to the center of the green — landed soft and released toward the flag, 12 feet. You read the putt right and poured it in. Birdie. Sometimes taking the extra club and letting the slope do the work is the most attacking play on the course. You found that out.`
           }
         ]
       },
@@ -253,21 +253,21 @@ const COURSES = [
             detail: 'Start it at the left rough edge and let it work back to center. Eliminates the right-side tilt. Leaves ~185 yards.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `The left side of this fairway is the only safe side — the right tilts toward the cove. You hit driver to the left half, the tailwind added carry, left 184 yards for a 7-iron. Hit a pure 7-iron to 11 feet. Made the birdie. On ocean-adjacent holes, protect the safe side even if it costs you angle. Position beats distance on holes where one side is dead.`
+            caddieText: `Driver to the left half, tailwind added carry — 184 yards left. Flushed a 7-iron to 11 feet. And you made the putt. Birdie on the long par 4. Playing the right side of the fairway on a hole where the wrong side is the ocean is not complicated. You figured that out.`
           },
           {
             label: 'Driver at the center of the fairway',
             detail: 'Hit it straight and let the tailwind carry it. Could leave only 165 yards — a half-9-iron.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `The tailwind and the tilting fairway combined against you. A straight, well-struck ball still bounced right toward the cove and found the rough along the water. Restricted lie, punched out, wedge to 25 feet, two putts — bogey. When terrain tilts toward danger, aim away from it, not at center. Let the slope tell you where to stand.`
+            caddieText: `Aimed center, hit it center — but the fairway tilt ran it right toward the cove. Found the rough along the water. Restricted lie, punched out 80 yards, wedge to 25 feet, three-putted because the first putt hit the toe. Bogey. The slope was telling you where to aim from the tee. You didn't listen.`
           },
           {
             label: '3-wood down the center',
             detail: 'Play safe, 230 yards, leaves 234 yards. A hybrid or long iron second shot, well away from the ocean.',
             outcome: 'par',
             score: 0,
-            caddieText: `Solid, safe par — hybrid second to the front edge, two putts. Nothing wrong with it. But the tailwind made this hole play shorter than 464. A good drive down the left side would have left a 7-iron into a long par 4. You traded a birdie opportunity for bogey-avoidance that wasn't really necessary on a tailwind day.`
+            caddieText: `3-wood to center, hybrid to the front edge, two putts for par. Nothing went wrong. Nothing went right either. The tailwind made this hole birdie-able with a driver left, and you laid back instead. Par is fine. Birdie was right there.`
           }
         ]
       },
@@ -280,23 +280,23 @@ const COURSES = [
           {
             label: '6-iron to the center of the green',
             detail: 'Two clubs extra for the wind. 6-iron into a 12mph headwind plays to about 175 yards. Aim center, not at the flag.',
-            outcome: 'birdie',
-            score: -1,
-            caddieText: `Perfect club selection. You converted a wind puzzle into a straightforward answer: 6-iron, center of the green, trust it. Landed center-green and released to 10 feet. Made the putt. On cliff-side holes at Pebble, always take more club and always miss away from the edge. You did both.`
+            outcome: 'par',
+            score: 0,
+            caddieText: `6-iron — right call. Hit it to center-green, 22 feet away. Hit a solid putt that stopped 2 feet short — you decelerated slightly and everyone knew it. Tapped in for par. You made the right club selection. The putting green had the last word.`
           },
           {
             label: '7-iron at the flag',
             detail: `Your 7-iron goes 170 yards — close enough to the hole's yardage. Take it straight at the pin.`,
             outcome: 'bogey',
             score: 1,
-            caddieText: `The 12mph headwind turned your 7-iron into a 150-yard club. Ball came up 20 yards short on the cliff's face — awkward spot. Chip to 18 feet, missed the par putt — bogey. This is the most common mistake at Pebble: using book yardage, not wind-adjusted yardage. At 12mph into your face, always take at least one full club extra. At 15mph+, take two.`
+            caddieText: `The 12mph headwind turned your 7-iron into a 150-yard club today. Ball came up 20 yards short on the shelf's face — an awkward spot. Chip to 18 feet, missed the par putt — burned the right edge. Bogey. Book yardage and wind-adjusted yardage are two completely different numbers.`
           },
           {
             label: '7-iron at maximum effort',
             detail: 'Swing harder than normal to fight through the wind and squeeze 185 yards out of your 7-iron.',
             outcome: 'double',
             score: 2,
-            caddieText: `Swinging harder into a headwind is a double penalty: the hard swing creates more spin, which makes the ball balloon even more. Your "max effort" 7-iron went 152 yards — less than a normal swing. Ball dropped off the front-right edge toward the cliff. From a horrid lie, you made double. The answer into wind is always more club, same swing. Never swing harder.`
+            caddieText: `Swinging harder into a headwind adds spin, which makes the ball balloon even more. Your "max effort" 7-iron went 152 yards — less than a normal swing. Ball dropped off the front-right edge toward the cliff. From a horrid lie you couldn't advance it cleanly. Double bogey. The answer is always more club, same swing. Tattooed on the inside of every caddie's brain.`
           }
         ]
       },
@@ -308,24 +308,24 @@ const COURSES = [
         choices: [
           {
             label: 'Punch out to 70 yards — take your medicine',
-            detail: 'Aim left of the branch, punch 9-iron low to the fairway. Lands at 94 yards — close to wedge range, solid scramble opportunity.',
+            detail: 'Aim left of the branch, punch 9-iron low to the fairway. Lands at 94 yards — close to wedge range.',
             outcome: 'par',
             score: 0,
-            caddieText: `That's the right play from trouble. You accepted the situation, punched out to 94 yards, hit a solid wedge to 4 feet, and made the par putt. The discipline to take your medicine when you're in trouble is what separates good scorers from great ones. You turned a potential double into a par through smart decision-making.`
+            caddieText: `Took your medicine — punched to 94 yards, hit your wedge to 4 feet, and made the putt. Par, from the rough, with a tree in your backswing. That's called scrambling and it's one of the most underrated skills in golf.`
           },
           {
             label: 'Power through the rough at the flag',
             detail: 'Aim just left of the branch and muscle a hard 7-iron through the rough at the green.',
             outcome: 'double',
             score: 2,
-            caddieText: `Deep rough kills iron shots, and the branch caught your follow-through. The ball squirted right, barely cleared the rough, and found the bunker at the green. Out of the bunker, two putts — double bogey. From deep rough with an obstruction, the odds are never in your favor going for the green. Take your medicine, save your par, move on.`
+            caddieText: `The branch caught your follow-through. The ball squirted 30 yards sideways into the bunker at the green's edge. Blasted out, two putts. Double bogey. This is the most predictable outcome in golf — deep rough, blocked lie, long iron = disaster. The rough was telling you to lay up. You ignored it.`
           },
           {
             label: 'Wedge punch to 120 yards',
-            detail: 'Short punch shot to get back in play, leaving a full pitching wedge approach instead of your wedge yardage.',
+            detail: 'Short punch shot to get back in play, leaving a full pitching wedge approach.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `Got back in play, which was good. But 120 yards left you at an awkward distance — not your best yardage. Wedge to 25 feet, missed the par putt — bogey. When taking your medicine, be precise about where you're laying up. Punching to 94 yards would have set up a genuine par save. 120 yards wasn't your best number.`
+            caddieText: `Got back in play, which was good. But 120 yards left you in a slightly awkward spot — not your best yardage. Hit a decent pitching wedge to 25 feet and missed the par putt left. Bogey. When you're in trouble, punch to your BEST yardage, not just any yardage. 70 yards is a different shot than 120.`
           }
         ]
       },
@@ -340,21 +340,21 @@ const COURSES = [
             detail: 'Pin is back-left. Take 4-iron and attack the flag directly on this rare calm day.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `Great read of the situation. On a calm day with a back pin, taking extra club and attacking makes sense — and you executed it. 4-iron started at the flag, dropped two feet short and released to tap-in range. Birdie. Calm conditions at long par 3s are gifts. You took advantage of the one time you can actually attack a pin that's normally too exposed to go at.`
+            caddieText: `4-iron at the back pin — aggressive on a calm day. Hit it pure, dropped two feet short of the flag and trickled to tap-in range. Birdie. Calm conditions at long par 3s are gifts and you treated them like one. On any other day at Pebble you're not going near that pin.`
           },
           {
             label: '5-iron to the center of the green',
             detail: 'On a calm day, pure distance: 5-iron carries about 200 yards. Aim center, make par, move on.',
             outcome: 'par',
             score: 0,
-            caddieText: `Good, solid par — 5-iron to center-green, 22 feet, two putts. Nothing wrong with that. On a calm day though, the back pin was actually attackable. Taking 4-iron and going at it converts this from a "make par" hole to a genuine birdie opportunity. Know when the conditions have turned a normally defensive hole into an offensive one.`
+            caddieText: `5-iron to center-green — textbook. 22 feet, two putts. Par on a 202-yard par 3. Nothing exciting happened and that was the plan. On calm days with a back pin you had room to be more aggressive. But par is par and par keeps the round together.`
           },
           {
             label: '6-iron with extra effort',
             detail: 'Swing hard with 6-iron to squeeze out 202 yards. The beach is only in play short.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `Swinging harder doesn't add reliable distance — it adds inconsistency. Your hard 6-iron flared right into the rough, awkward spot, chip to 15 feet, missed the par putt — bogey. On calm days, hit a comfortable 5-iron or 4-iron at real distance rather than manufacturing distance from the wrong club. Let the club do the work.`
+            caddieText: `Swinging harder doesn't add distance — it adds inconsistency. Your hard 6-iron flared right into the rough, left an awkward chip, toed the chip, and missed the par putt right. Bogey. On a calm day at a 202-yard hole, hitting a comfortable 5-iron at real distance beats manufacturing distance from the wrong club every single time.`
           }
         ]
       },
@@ -369,21 +369,21 @@ const COURSES = [
             detail: 'Flight a low 8-iron to center-green. It lands firm, releases toward the front-left flag.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `The best of both worlds. The knock-down 8-iron took spin off the ball, landed center-green, and trickled toward the flag — 9 feet. Made the birdie. Knock-down shots into small greens are underused: they're easier to control, land softer than expected, and release toward lower elevations. Here, that meant releasing toward the front-left flag without bunker risk. The conservative play was actually the most attacking play.`
+            caddieText: `Knock-down 8-iron, center-green — it landed firm and trickled toward the front-left flag to 9 feet. You read it as a straight putt. It was straight. You drained it. Birdie. The pot bunker never came into play because you never gave it a chance.`
           },
           {
             label: '9-iron to the right half of the green',
             detail: 'Miss right, miss safe — 9-iron at the right half takes the bunker completely out of play.',
             outcome: 'par',
             score: 0,
-            caddieText: `Smart play. You eliminated the pot bunker and gave yourself a realistic putt from 22 feet right of the flag. Couldn't convert but tapped in for par. The front-left bunker on a short approach is a classic sucker flag — the birdie upside doesn't justify the risk of a near-unplayable lie. Par is the professional's score when the flag is in a punishing position.`
+            caddieText: `9-iron to the right half — took the sucker bunker completely out of play. 22 feet right of the flag. Hit a solid putt that broke more than you thought and barely tapped in from 2 feet. Par. Smart play, mediocre putt, good score. The pros call this "course management." The rest of us call it surviving.`
           },
           {
             label: '9-iron straight at the flag',
             detail: `Attack the front-left pin directly. 139 yards, 9-iron — if you flush it, it's birdie range.`,
             outcome: 'bogey',
             score: 1,
-            caddieText: `You went for the sucker flag and got what most do: a pot bunker. The ball pitched a yard left of the hole, caught the bunker lip, settled in deep sand. Difficult blast out to 12 feet, missed the par putt — bogey. Pot bunkers at Pebble are not normal bunkers — they often require a sideways or backward escape. Recognize the "sucker pin" and aim away from it.`
+            caddieText: `9-iron at the sucker flag found the pot bunker. Blasted it 12 feet past — you can barely swing in a Pebble pot bunker, the walls are above your knees. Missed the par putt. Bogey. The sucker flag claimed another victim. It has been doing this since 1919.`
           }
         ]
       },
@@ -398,21 +398,21 @@ const COURSES = [
             detail: 'Calculate precisely: hybrid or 5-iron for 223 yards leaves exactly 70 yards for your money wedge. Know your number.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `You laid up to exactly 73 yards on the second shot — perfectly calibrated to your wedge. Money wedge from 73 yards to 6 feet, birdie putt drops. On a three-shot par 5, the second shot decision is everything: not "how far can I hit it" but "what yardage do I want for shot three?" You answered that question correctly. 70 yards is the answer on every par 5 you can't reach.`
+            caddieText: `Calibrated layup to exactly 73 yards — perfectly executed. Money wedge to 6 feet. Made the putt. Birdie on the longest hole at Pebble Beach. Not because you were long. Because you were precise. Any touring pro will tell you: the second shot on a par 5 isn't about distance, it's about your third shot yardage.`
           },
           {
             label: '3-wood as far as possible',
             detail: 'Hit 3-wood for max distance, leaving ~55 yards. Gets you close to birdie range on the third.',
             outcome: 'par',
             score: 0,
-            caddieText: `You hit 3-wood 240 yards but the crosswind pushed it right into the first cut of rough. From 53 yards in the rough, your wedge couldn't spin it close — 18 feet for birdie, missed it, par. Interestingly, the max-distance shot left you in worse position than a calibrated layup would have. The goal is not "as close as possible" — it's "your best yardage in the fairway."`
+            caddieText: `3-wood 240 yards but the crosswind pushed it into the first cut of rough — 53 yards left, bad lie. Tried to spin a wedge but it came out low and hot, rolled 18 feet past the flag. Two putts for par. Maximum distance isn't maximum result. A calibrated layup to your best yardage beats max-distance into trouble every time.`
           },
           {
-            label: 'Two-stage layup: iron, then wedge',
-            detail: 'Conservative iron to 180 yards out, then a precise wedge to your 70-yard zone. Three precision shots.',
+            label: 'Two-stage layup: iron, then wedge to set up',
+            detail: 'Conservative iron to 180 yards out, then a precise wedge to your 70-yard zone before attacking.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `Overly conservative. You laid up twice, using your wedge on the third shot to get to the 70-yard spot — meaning your wedge was now your fourth shot. Chipped to 10 feet, missed the putt — bogey. On par 5s, your second shot should be the layup to your best yardage. One well-chosen club to 70 yards is all you need. Strategy-stacking costs shots.`
+            caddieText: `You stacked the layup: iron to 180, then a second wedge to 70 yards — meaning your money wedge was your FOURTH shot to the green on a par 5. Got there, hit a decent wedge to 10 feet, missed the birdie putt for par, then missed the par putt too. Bogey. One well-chosen second shot to 70 yards is all you need. Stop overcomplicating it.`
           }
         ]
       },
@@ -427,21 +427,21 @@ const COURSES = [
             detail: 'Play 9-iron to 10 yards short of the flag and let the firm green release the ball toward the hole.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `Reading the firm conditions was the key. Rather than trying to fly it to the hole, you landed it short and let the slope release the ball to 7 feet. Made the birdie. On firm, fast greens, the best players play below the hole and let the green do the work. "Releasing" toward the pin is often more reliable than flying it there — especially when backspin is unpredictable on hard surfaces.`
+            caddieText: `9-iron to 10 yards short of the flag — it landed and released to 7 feet. Made the putt. You read the firm green conditions and used them. The ball did exactly what you planned. That's what good course management looks like from 127 yards.`
           },
           {
             label: 'Pitching wedge directly at the flag',
             detail: 'Take pitching wedge (115 yards), flight it high, try to stop it near the flag from 127 yards.',
             outcome: 'par',
             score: 0,
-            caddieText: `The pitching wedge landed just past the flag and checked up to 14 feet. Good shot, but from 127 yards, under-clubbing by 12 yards cost you a birdie look. Par putt was makeable but the line was tough — missed it. At 127 yards you have enough club to attack with your 9-iron. Using pitching wedge from that distance is playing defense when you should be playing offense.`
+            caddieText: `Pitching wedge from 127 yards checked up to 14 feet — good shot, wrong club by 12 yards. Hit a decent par putt that slid by the right edge. Par. From 127 yards you had enough club to attack with your 9-iron. Using pitching wedge from that distance is playing defense when offense was available.`
           },
           {
             label: 'Sand wedge at full effort',
             detail: 'Swing your sand wedge hard to reach 127 yards. Try to stop it dead on a firm green.',
             outcome: 'bogey',
             score: 1,
-            caddieText: `Swinging a sand wedge hard to reach 127 yards on a firm green is the worst combination: maximum spin meets hard surface. The ball hit, checked violently, then spun off the right edge into the bunker. Blast out to 20 feet, missed the putt — bogey. Never manufacture distance from the wrong club. The right club for 127 yards is 9-iron — controlled, accurate, at the right swing speed.`
+            caddieText: `Swinging a sand wedge hard to reach 127 yards on a firm green is a uniquely bad idea. The ball hit, checked violently, then spun off the right edge into the bunker because that's what maximum-spin wedge shots do on hard surfaces. Blasted out to 20 feet. Two putts. Bogey. The right club for 127 yards is not the sand wedge at full power.`
           }
         ]
       },
@@ -456,21 +456,21 @@ const COURSES = [
             detail: 'Aim left-center, play the full dogleg. 280-yard drive leaves ~122 yards for a soft pitching wedge.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `Playing the proper line on a dogleg is almost always correct — especially when the wind is working against cutting the corner. You hit driver to the left-center, left 122 yards, hit a crisp pitching wedge to 9 feet. Made the putt. Doglegs exist to reward players who play the angles, not the shortcuts. The inside line always asks you to carry more than you think.`
+            caddieText: `Driver up the left side — perfect line. 122 yards left, hit a crisp pitching wedge to 9 feet. Made the putt. Birdie. Playing the proper line on a dogleg is almost always the right call, especially when the wind is against cutting the corner. You played the hole the way it was designed.`
           },
           {
             label: 'Driver to cut the corner over the trees',
             detail: 'Aim at the trees and carry 255 yards over them. Right-to-left wind is working against your natural fade.',
             outcome: 'double',
             score: 2,
-            caddieText: `You needed 255 yards to clear those trees. The right-to-left wind slowed your natural fade and you came up 8 yards short — ball deflected hard into the rough. From a tangled lie under the branches, you hacked out sideways, wedge to 30 feet, two putts — double. Tree-line gambits at Pebble are almost never worth it. The penalty for failure is too severe; the reward (wedge instead of pitching wedge) is too small.`
+            caddieText: `Needed 255 yards to clear those trees. Came up 8 yards short — ball deflected hard into the rough under the branches. From a tangled lie you had one option: sideways. Wedge to 30 feet. Three-putted. Double bogey. The tree shortcut has a near-100% bogey-or-worse rate at Pebble. The math has never worked.`
           },
           {
             label: '3-wood to the wide part of the fairway',
-            detail: '3-wood safe to the wide left section, leaving 160 yards for a 7-iron approach.',
+            detail: '3-wood to the wide left section, leaving 160 yards for a 7-iron approach.',
             outcome: 'par',
             score: 0,
-            caddieText: `Solid par — 3-wood to the wide fairway, 7-iron to 20 feet, two putts. Conservative and reliable. The only thing keeping this from being the right answer: driver up the left side is equally safe and leaves a shorter, more attackable approach. When playing it safe off the tee, make sure you're actually gaining something from that decision.`
+            caddieText: `3-wood to the wide left fairway — safe and smart. 7-iron to 20 feet. Two putts for par. Nothing wrong with it. Driver up the left side would have been equally safe with a shorter approach. But par counts the same and you kept the ball in play. That's the job.`
           }
         ]
       },
@@ -485,21 +485,21 @@ const COURSES = [
             detail: 'Take 3-wood (240+ yards in calm air) to fight the wind. Aim center-right — ocean completely out of play.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `Aggressive and smart at the same time. Into an 18mph headwind, your 3-wood played to just over 200 yards — landed center-right and released toward the flag to 8 feet. Made the birdie. Sometimes the right play IS the aggressive one, but only when the aggressive play also eliminates danger. A center-right 3-wood removed the ocean while giving you a genuine birdie look. Perfect.`
+            caddieText: `3-wood aimed center-right — removed the ocean from play entirely. Into the 18mph headwind it played to about 205 yards. Landed center, released toward the flag — 8 feet. Made the putt. On the most dangerous par 3 at Pebble Beach, you attacked with the shot that also protected you. Jack Nicklaus would approve.`
           },
           {
             label: '4-iron to the center of the green',
-            detail: 'Forget the flag. 4-iron into the headwind plays to about 190 yards. Aim center-right, make par, protect your score.',
+            detail: 'Forget the flag. 4-iron into the headwind plays to about 190 yards. Aim center-right, take par and move on.',
             outcome: 'par',
             score: 0,
-            caddieText: `Exactly right — you played this hole the way it should be played. Aimed away from the ocean, took enough club, safely found the center-right. 20-foot putt, two putts for par. Par on the 17th at Pebble in an 18mph headwind is a round-saving score. The players who make double are the ones who go at the left flag. You didn't. Smart.`
+            caddieText: `4-iron aimed right, stayed right. Center-right of the green, 20 feet away. Two putts for par. On the 17th at Pebble Beach in an 18mph headwind, a par feels like a birdie. You didn't get greedy, didn't find the ocean, and are now looking at a closing par 5 with a chance to finish strong.`
           },
           {
             label: '3-iron directly at the left-center flag',
             detail: `Take 3-iron and attack the flag. The ocean is left, but you're going for birdie.`,
             outcome: 'double',
             score: 2,
-            caddieText: `The ocean took your ball. Into an 18mph headwind, a straight 3-iron at a left-center flag gave zero margin for error. The ball started well but the headwind magnified a slight draw and it landed in the Pacific. Drop zone, pitch on, two putts — double bogey. On the 17th at Pebble, the ocean is the hole's defense. Attacking a left flag in a headwind is walking right into that defense.`
+            caddieText: `3-iron at the left-center flag, into 18mph of headwind. The ocean took your ball. Drop zone, wedge on, two putts. Double bogey. This hole has been eating golf balls since 1919 and yours was just the latest. The flag was on the ocean side. The wind was blowing you toward the ocean. You aimed at the ocean. The ocean accepted your offering.`
           }
         ]
       },
@@ -514,21 +514,21 @@ const COURSES = [
             detail: 'Precise layup to the right side at 70 yards. Ocean completely eliminated. Set up your closing wedge.',
             outcome: 'birdie',
             score: -1,
-            caddieText: `You finished Pebble the right way. Laid up to the right side — ocean completely out of play — hit your money wedge from 70 yards to 6 feet, and made the birdie. Pebble's 18th is the most tempting hole in the world for heroics. But the best finishing strategy is the same as every strategy: protect the right side, set up your wedge, make the putt. Tom Watson won here with a smart layup birdie. So did you.`
+            caddieText: `Laid up to the right side — ocean never even a thought. Hit your money wedge from 70 yards to 6 feet. Made the birdie putt to close it out. You finished Pebble Beach the way it's meant to be closed: smart, controlled, and a made putt at the end. Tom Watson finished this way. Now so did you.`
           },
           {
             label: '3-wood at the green from 265 yards',
             detail: 'Go for the green in two. The ocean is left, but flush a 3-wood right and you could make eagle.',
             outcome: 'double',
             score: 2,
-            caddieText: `265 yards with the ocean guarding the entire left side — this is one of the most dangerous shots in golf. Your 3-wood started fine but the left-to-right wind helped the ball more than expected and it released toward the water. Ball found the Pacific. Drop zone, onto the green in 4, two putts — double. Pebble's 18th has swallowed eagle attempts for generations. The ocean always wins unless you play the right side.`
+            caddieText: `265 yards with the ocean guarding the entire left side. The 3-wood started fine but leaked left — Stillwater Cove took your ball. Drop zone, onto the green in four, two putts. Double bogey. Pebble's 18th has swallowed eagle attempts since the course opened in 1919. The cove wins every time you let it into play.`
           },
           {
             label: 'Conservative layup to 120 yards',
             detail: '120-yard layup — well short of wedge distance but far from the ocean.',
             outcome: 'par',
             score: 0,
-            caddieText: `Good process, but slightly over-conservative. From 120 yards you hit a nice wedge to 18 feet but couldn't convert the birdie putt. Par. The issue: 120 yards isn't your best yardage — 70 yards is. On a finishing hole where birdie matters, set up the shot you actually own. Know your best number and play to it, every time.`
+            caddieText: `Laid up to 120 yards — safe, but not your best number. Hit a nice wedge to 18 feet but couldn't convert the birdie putt, and the par putt just curled away at the end. Par to close. The ocean never came into play, which was smart. But 70 yards is a better number than 120 for you, and you left the birdie opportunity on the table.`
           }
         ]
       }
@@ -552,7 +552,7 @@ const COURSES = [
     location: 'Augusta, GA',
     difficulty: 'Masters',
     difficultyLevel: 4,
-    description: 'Amen Corner, Rae\'s Creek, and the most storied Par 3 course in history.',
+    description: `Amen Corner, Rae's Creek, and the most storied Par 3 course in history.`,
     yardage: 6565,
     par: 72,
     available: false,
